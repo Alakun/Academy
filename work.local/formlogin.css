@@ -1,0 +1,228 @@
+.modal-dialog {
+  position: relative;
+	width: 770px;
+  margin: 50px auto;
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 -2px 15px rgba(0,0,0,.2);
+    background-clip: padding-box;
+    outline: 0;
+}
+.auth-modal-container .modal-body {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.modal-body {
+    position: relative;
+    padding: 15px 40px;
+}
+.alert:empty {
+    display: none;
+}
+.alert-block, .alert-error {
+    background-color: #fbe9e9;
+    border: 1px solid #f5c7c7;
+}
+.alert {
+    color: #4b4f54;
+    padding: 13px 20px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 18px;
+}
+.auth, .auth__form dd:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+.auth__wrapper {
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px 30px 10px;
+    box-sizing: border-box;
+}
+.reg-invite__wrapper {
+    margin-bottom: 35px;
+}
+.registr-title {
+    font-weight: 400;
+}
+.h3-like, h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 21px 0 18px;
+}
+.h3-like, .h4-like, h3, h4 {
+    font-weight: 500;
+    color: #212121;
+}
+.reg-invite__description {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+.reg-invite .btn {
+    width: 100%;
+}
+.btn_green:link, .btn_green:visited {
+    color: #fff;
+}
+.link-dotted, .link-like, .link_icon, a:link, a:visited {
+    color: #0b70b7;
+}
+.btn, .btn_cancel, .cursor-pointer, .link-dotted, .link-like, .link_icon, a:link, button {
+    cursor: pointer;
+}
+.tm-tag, a:link {
+    text-decoration: none;
+}
+.btn_green {
+    background-color: #6bbc2f;
+    border-color: #549d1e;
+    text-shadow: 0 -1px rgba(42,136,30,.3);
+}
+.btn_blue, .btn_green {
+    border-width: 0 0 2px;
+    border-style: solid;
+    color: #fff;
+}
+.btn {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: 4px;
+    padding: 10px 18px;
+    -webkit-transition: background-color .15s ease-out;
+    -o-transition: background-color .15s ease-out;
+    transition: background-color .15s ease-out;
+    outline: 0!important;
+}
+.btn, .btn__app, .ctrl__top-login {
+    display: inline-block;
+}
+.btn, .btn:hover, .btn_cancel, .link-dotted, .link-dotted:hover, .link-dotted_icon:hover {
+    text-decoration: none;
+}
+.btn, .label, .popover-content {
+    font-weight: 400;
+}
+.align-c, .btn {
+    text-align: center;
+}
+.btn_orange {
+    color: #fff;
+    background-color: #ffb81d;
+    border-color: #eb940b;
+    text-shadow: 0 -1px rgba(233,146,8,.3);
+}
+.btn_orange:link, .btn_orange:visited, .btn_red, .btn_red:link, .btn_red:visited {
+    color: #fff;
+}
+.btn_orange, .btn_red, .btn_transparent {
+    border-width: 0 0 2px;
+    border-style: solid;
+}
+.modal-close {
+    font-size: 24px;
+    line-height: 1;
+    color: #b7b7b7;
+    background-color: transparent;
+    display: block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    z-index: 2;
+}
+.alert .close, .modal-close, .proposals-list__company a:hover {
+    text-decoration: none;
+}
+.auth__form {
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    padding: 15px 19px 10px;
+}
+.red-star {
+    color: #da2c2c;
+}
+input.auth__text-input {
+    width: 100%;
+}
+input[type=number], input[type=password], input[type=search], input[type=text] {
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    color: #212121;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: none;
+}
+form dd {
+    margin-bottom: 18px;
+}
+body, dd {
+    margin: 0;
+}
+form dl {
+    margin-top: 0;
+}
+.auth__form dt {
+    color: #4B4F54;
+    font-weight: 400;
+}
+.auth__form .ui-checkboxradio-label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.auth__form .forget-password, .auth__form .ui-checkboxradio-label {
+    color: #7c7c7c;
+}
+.auth__form input[type=submit] {
+    margin-right: 6px;
+    width: 50%;
+}
+input[type=submit] {
+    font-size: 14px;
+    cursor: pointer;
+}
+.auth__form .forget-password, .auth__form .ui-checkboxradio-label {
+    color: #7c7c7c;
+}
+.ui-checkboxradio-label {
+    cursor: pointer;
+    user-select: none;
+    font-weight: 400;
+    color: #212121;
+}
+.auth__form .ui-checkboxradio-label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.auth__form dd:last-child {
+    align-items: center;
+}
+.auth__form .ui-checkboxradio-label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.auth__form .forget-password, .auth__form .ui-checkboxradio-label {
+    color: #7c7c7c;
+}
+.ui-checkboxradio-label {
+    cursor: pointer;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+    color: #212121;
+}
+.auth .advanced-checkbox, .webpay-button-logo, .webpay-type-logo {
+    display: inline-block;
+}

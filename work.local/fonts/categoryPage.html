@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>Category Page</title>
+        
+        <link href="css/animation.css" rel="stylesheet" type="text/css" />
+        <link href="css/fontello.css" rel="stylesheet" type="text/css" />
+        <link href="css/fontello-codes.css" rel="stylesheet" type="text/css" />
+        <link href="css/fontello-embedded.css" rel="stylesheet" type="text/css" />
+        <link href="css/fontello-ie7.css" rel="stylesheet" type="text/css" />
+        <link href="css/fontello-ie7-codes.css" rel="stylesheet" type="text/css" />   
+        <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div class='head-top'>
+                <div class='iner-wrap'>
+                    <div id='date'> 
+                        <script language="javascript" type="text/javascript"><!--
+                            var d = new Date();
+
+                            var day=new Array("Воскресенье","Понедельник","Вторник",
+                            "Среда","Четверг","Пятница","Суббота");
+
+                            var month=new Array("января","февраля","марта","апреля","мая","июня",
+                            "июля","августа","сентября","октября","ноября","декабря");
+
+                            document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()]
+                            + " " + d.getFullYear() + " г.");
+                            //--></script>
+                    </div>
+                    <img src="">
+                    <div id="social-links">
+                        <a href="#">
+                            <i class="icon-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="icon-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="icon-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="icon-vkontakte"></i>
+                        </a>
+                        <a href="#">
+                            <i class="icon-odnoklassniki"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='clearfix iner-wrap'>
+                <div class=" head-bot clearfix">
+                    <div class="head-inner">
+                        <a href='#'><img src="img/logo.jpg"></a>
+                    </div>
+                    <div class='top-right'>
+                        <div id='logintop' class="head-inner">
+                            <i class='icon-users'></i>
+                            <button style="background: none; border: none; outline: 0; color:rgb(40,157,204); line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Вход</button>
+                            <span style="margin-left: 5px;margin-right: 5px;">|</span>
+                            <button style="background: none; border: none; outline: 0;color: rgb(40,157,204);line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Регистрация</button>
+                            <div id="myModal" class="modal fade">
+                            <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-applicant-auth modal-body">
+                <div id="login-error-area" class="alert alert-error alert_small"></div>
+                <section class="auth">
+                    <div class="auth__wrapper">
+                        <div class="auth__title h3-like registr-title">Вход</div>
+                        <!--script src="/forms/js/third-party/jquery.form.min.js" type="text/javascript"></script>
+                        <script src="/js/praca/auth-ajax-form.js" type="text/javascript"></script-->
+                        <form name="login-form" method="post" class="auth__form" id="login-form">
+                            <div>
+                                <dl>
+                                    <dt>E-mail <span class="red-star">*</span>  <span id="praca-login-help-email" class="help-icon" data-original-title="" title=""></span></dt>
+                                    <dd>
+                                        <input name="login-form[email]" type="text" maxlength="255" class="form-etc account-area auth__text-input">                                                                             </dd>
+                                        <dt>Пароль <span class="red-star">*</span>  <span id="praca-login-help-password" class="help-icon" data-original-title="" title=""></span></dt>
+                                        <dd>
+                                            <input name="login-form[password]" type="password" maxlength="16" class="form-etc xxx account-password auth__text-input">                                                                               </dd>
+                                            <dd id="web-forms__collection_dd_js-advanced-checkbox-58b687df2a428__item">
+                                                <label class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-check ui-state-checked ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span><div class="advanced-checkbox"><input name="login-form[remember]" type="checkbox" checked="checked" value="1" id="js-advanced-checkbox-58b687df2a428" class="ui-checkboxradio ui-helper-hidden-accessible"></div> запомнить меня <span id="praca-login-help-remember" class="help-icon" data-original-title="" title=""></span></label>                                                                                </dd>
+                                                <dd>
+                                                    <input name="login-form[referrer]" type="hidden" value="https://praca.by/">                                                                             </dd>
+                                                    <dd>
+                                                        <input type="submit" value="Войти" data-loading-text="Вход..." class="btn btn_green"><a class="forget-password" href="#" tabindex="-1">Забыли пароль?</a>                                                                             </dd>
+                                                    </dl>   </div>
+                                                </form>
+                                                <!--script type="text/javascript">web_forms__init_ajax_form('#login-form');</script>
+                                                <script>
+                                                    $(document).trigger('auth-event', ['', false]);
+
+                                                    Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-email'), 'login_email');
+                                                    Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-password'), 'login_password');
+                                                    Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-remember'), 'login_remember');
+
+                                                    $('#login-form input[type="checkbox"]').checkboxradio();
+                                                </script>                       <div class="social-binding social-binding_login">
+                                                <p class="social-binding__note social-binding__note_login">Вход через социальную сеть</p>
+                                                <ul class="social-binding__list clearfix">
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_google-plus" href="https://praca.by/social-auth/Google/"><i class="mdi mdi-google-plus"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_facebook" href="https://praca.by/social-auth/Facebook/"><i class="mdi mdi-facebook"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_twitter" href="https://praca.by/social-auth/Twitter/"><i class="mdi mdi-twitter"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_vk" href="https://praca.by/social-auth/Vkontakte/"><i class="mdi mdi-vk"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_odnoklassniki" href="https://praca.by/social-auth/Odnoklassniki/"><i class="mdi mdi-odnoklassniki"></i></a></li>
+                                                </ul>
+                                            </div-->                  </div>
+
+                                            <div class="auth__wrapper js-dependent-auth js-default-auth">
+                                                <div class="reg-invite">
+                                                    <div class="reg-invite__wrapper">
+                                                        <div class="h3-like registr-title">Соискателям</div>
+                                                        <p class="reg-invite__description">
+                                                            <noindex>Зарегистрировавшись, соискатели могут
+                                                                размещать резюме и откликаться на заинтересовавшие их вакансии.</noindex>
+                                                            </p>
+                                                            <a href="#" class="btn btn_green">Регистрация соискателя</a>
+                                                        </div>
+
+                                                        <div class="reg-invite__wrapper">
+                                                            <div class="h3-like registr-title">Работодателям</div>
+                                                            <p class="reg-invite__description">
+                                                                <noindex>Зарегистрировавшись, работодатели могут размещать свои&nbsp;вакансии.</noindex>
+                                                            </p>
+                                                            <a href="#" class="btn btn_orange">Регистрация работодателя</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="auth__wrapper js-dependent-auth js-applicant-auth no-padding-right" style="display: none;">
+                                                    <div class="reg-applicant__wrapper">
+                                                        <div class="fff h3-like registr-title">Регистрация соискателя</div>
+                                                        <div class="text-gray">
+                                                            <noindex>Еще нет аккаунта? Зарегистрируйтесь!</noindex>
+                                                        </div>
+                                                        <div class="info-registr-cont">
+                                                            <div class="info-registr">
+                                                                <i class="svg svg-publish"></i>
+                                                                <span class="text-gray">Создавайте резюме</span>
+                                                            </div>
+                                                            <div class="info-registr">
+                                                                <i class="svg svg-laptop"></i>
+                                                                <span class="text-gray">Откликайтесь на вакансии</span>
+                                                            </div>
+                                                            <div class="info-registr">
+                                                                <i class="svg svg-mail"></i>
+                                                                <span class="text-gray">Получайте предложения от работодателей</span>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="btn btn_green btn_mrg-vertical">
+                                                            Регистрация соискателя                            </a>
+
+                                                            <p class="text-gray">Ищете сотрудников?
+                                                                <a href="#">Регистрация работодателя</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="auth__wrapper js-dependent-auth js-employer-auth no-padding-right" style="display: none;">
+                                                        <div class="reg-applicant__wrapper">
+                                                            <div class="asd h3-like registr-title">Регистрация работодателя</div>
+                                                            <div class="text-gray">
+                                                                <noindex>Еще нет аккаунта? Зарегистрируйтесь!</noindex>
+                                                            </div>
+                                                            <div class="info-registr-cont">
+                                                                <div class="info-registr">
+                                                                    <i class="svg svg-publish"></i>
+                                                                    <span class="text-gray">Размещайте вакансии</span>
+                                                                </div>
+                                                                <div class="info-registr">
+                                                                    <i class="svg svg-laptop"></i>
+                                                                    <span class="text-gray">Получайте отклики от соискателей</span>
+                                                                </div>
+                                                                <div class="info-registr">
+                                                                    <i class="svg svg-servises"></i>
+                                                                    <span class="text-gray">Воспользуйтесь дополнительными услугами портала</span>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn btn_green btn_mrg-vertical">
+                                                                Регистрация работодателя                            </a>
+
+                                                                <p class="text-gray">Ищете работу?
+                                                                    <a href="#">Регистрация соискателя</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">
+                                                <i class="mdi mdi-close"></i></button>
+                                                </div>
+                                            </div>
+                        </div>
+                        </div>
+                        
+                        
+                        
+                        <div id=''>
+                            <span style="float: right;">
+                                <i class='icon-dollar'></i>
+                                Выбор валюты
+                                <i class="icon-angle-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="info" style="float: left;">
+                        <div id='weather' class="head-inner">
+                        
+                        </div>
+                        <div id='kurs' class="head-inner">
+                            <div id='kurs-money'>
+                            </div>
+                            <div id='kurs-fuel'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mainNav" >
+            
+                <div class="iner-wrap clearfix">
+                    <ul class=menu>
+                        <li style="background-color:rgb(40,157,204);">  
+                            <a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                            <ul class='submenu'>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">Актуальное</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">Происшествия</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">Это интересно</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">Шоубизнес</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">Авто News</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">IT-сфера</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="width: 137.5px;">Все новости</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>    
+                            <a href="#">Форум</a>
+                        </li>
+                        <li>    
+                            <a href="#">Стать партнером</a>
+                        </li>
+                        <li>    
+                            <a href="#">Карты salam.by</a>
+                        </li>
+                        <li>    
+                            <a href="#" class="visibl_li">Партнеры salam.by</a>
+                        </li>
+                        <li>    
+                            <a href="#">Продукция</a>
+                        </li>
+                    </ul>
+                    <ul class="menu_unvis">
+                        <li style="background-color:rgb(40,157,204);">  
+                            <a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
+                            </a>
+                        </li>
+                        <li style="background-color: background-color: rgb(35,35,35);">
+                            <a href="#" class="icon-menu" style="padding-left:1px; padding-right:1px;"></a>
+                            <ul class="submenu_unvis">
+                                <li>
+                                    <a href="#">Новости</a>
+                                </li>
+                                <li>    
+                                    <a href="#">Форум</a>
+                                </li>
+                                <li>    
+                                    <a href="#">Стать партнером</a>
+                                </li>
+                                <li>    
+                                    <a href="#">Карты salam.by</a>
+                                </li>
+                                <li>    
+                                    <a href="#" class="visibl_li">Партнеры salam.by</a>
+                                </li>
+                                <li>    
+                                    <a href="#">Продукция</a>
+                                </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+				<div class="findjob ">
+        	<div class="layer ">  
+           		<div class="iner-wrap">              
+	                <div class="search_box">
+						<form class="search_form">
+						  <div class="row" style="margin: 0;width: 100%; display: block;position: absolute;">
+                        <div class="sup_form">
+						    <div class="col-xs-6" style="width: 15%; padding: 0px; display: block;">
+						      <div class="input-group ">
+						        <div class="input-group-btn" style="width: 50%;">
+						          <button type="button" class="btn btn-default dropdown-toggle find" data-toggle="dropdown" aria-expanded="false" style=" width: 100%; margin: 0; border-radius: 4px 0px 0px 4px;     background: white;    outline: 0; text-align: left;">
+						            Вакансии <span class="caret" style="float: right; margin-top: 8px;"></span>
+						          </button>
+						          <ul class="dropdown-menu">
+						            <li><a href="#" rel="nofollow">Вакансии</a></li>
+						            <li><a href="#">Резюме</a></li>
+						          </ul>
+						        </div>
+
+                              </div>
+						    </div>
+						        <div class="inp_unvis" style="
+                                    display: block;
+                                    border-left: 1px solid #5F9EA0;
+                                    border-right: 1px solid #5F9EA0;
+                                    float: left;
+
+                                    ">
+						            <input type="text" class="form-control" placeholder="Найти вакансию, например: Менеджер" style="height: 44px; border-radius: 0px; border: none;">
+                                </div>
+                              </div>
+                               <div class="sup_form">
+                                <div class="param_unvis" data-toggle="modal"  style="height: inherit;width: 12%;white-space: nowrap;text-align: center;outline: 0;font-size: 100%;vertical-align: middle;border-right: 1px solid #5F9EA0;float: left; position: relative;line-height: 44px;height: 44px;">
+			                        
+  <div><button class="param_btn"><i class="icon-sliders"></i>Параметры</button></div>
+		                        </div>
+                                <div class="loc_unvis" style="width: 4%; height: 44px; white-space: nowrap;text-align: center;outline: 0;font-size: 1.0em;border-right: 1px solid #5F9EA0;float: left; position: relative;">
+  <i class="icon-location" style="
+    display: table-cell;
+    vertical-align: middle;
+"></i>
+		                        </div>
+                              </div>
+                                <div style="display: block;position: relative;float: left;width: 15%;">
+                                    <input name="form-submit-btn" type="submit" value="Найти" tabindex="5" class="search__submit js-search-bar-submit">
+						        </div>
+                        </div>
+				       </form>
+	      			</div>       
+	            <div class="ads">    
+	                <div class="hd">
+			            <h1>Найти работу с SALAM</h1>
+			        </div>
+			        <div class="num">
+			            <h2>Вакансий: 1244</h2>
+			            <h2>Резюме: 1368</h2>
+			        </div>
+			        <div class="ad">
+			            <div class="get_vak">
+			                <button class="but_vak">Разместить вакансию</button>
+			            </div>
+			            <div class="get_res">
+			                <button class="but_res">Разместить резюме</button>
+			            </div>
+			        </div>
+			    </div>
+		    </div>		    
+		</div>
+    </div>
+		<div class="vak_catalog">
+		    <div class="inner_wrapp">
+		        <div class="search_greed">
+		            <div class="search_greed_col1">
+                    <div style="display: block">
+		                <div class="select_widjet">
+		                    <div style="padding: 10px;">Показывать вакансии</div>
+		                    <div class="filter">
+                                <div class="dropdown sortable-dropdown" style="margin-left: 10px;margin-bottom: 30px;">
+                                    <button class="btn btn-default dropdown-toggle js-upped-period-dropdown-btn" type="button" id="filter-bar-upped-period-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 80%; text-align: left;">
+                                        За все время				<span class="caret" style="float: right; margin-top: 8px;"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="filter-bar-upped-period-dropdown">
+
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=">за все время</a>
+                                            </li>
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=1">за сутки</a>
+                                            </li>
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=3">за 3 дня</a>
+                                            </li>
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=7">за неделю</a>
+                                            </li>
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=30">за месяц</a>
+                                            </li>
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=90">за 3 месяца</a>
+                                            </li>
+                                                            <li><a class="js-upped-period-filter-link" href="?&amp;upped_period=180">за полгода</a>
+                                            </li>
+                                                    </ul>
+                                </div>
+
+                                <script>
+                                    $('.dropdown-toggle').dropdown();
+                                </script>
+                            </div>
+		                </div>
+		                <div class="select_widjet">
+
+
+		
+                                <div class="related">
+
+                                <div class="relate-filter">Зарплата</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Bsalary_fr_byr%5D%5B100%5D=1" data-salary="100">От 40 руб.</a>
+                                        <span>14</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bsalary_fr_byr%5D%5B160%5D=1" data-salary="160">От 600 руб.</a>
+                                        <span>13</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bsalary_fr_byr%5D%5B600%5D=1" data-salary="600">От 1200 руб.</a>
+                                        <span>9</span>
+                                    </div>
+                                    <!--div class="filter">
+                                        <a href="?search%5Bsalary_fr_byr%5D%5B900%5D=1" data-salary="900">От 900 руб.</a>
+                                        <span>13</span>
+                                    </div-->
+                                    <div class="filter">
+                                        <a href="?search%5Bsalary_fr_byr%5D%5B1500%5D=1" data-salary="1500">От 1 500 руб.</a>
+                                        <span>6</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bsalary_fr_byr%5D%5B0%5D=1" data-salary="0">Не указана</a>
+                                        <span>6</span>
+                                    </div>
+                                    <div class="relate-filter">График работы</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Bschedule%5D%5Bfull%5D=1">Фиксированный</a>
+                                        <span>13</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bschedule%5D%5Bflexible%5D=1">Гибкий</a>
+                                        <span>10</span>
+                                    </div>
+                                    <!--div class="filter">
+                                        <a href="?search%5Bschedule%5D%5Bexchange%5D=1">Сменный</a>
+                                        <span>1</span>
+                                    </div-->
+                                    <div class="relate-filter">Занятость</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Boccupation%5D%5Bfull%5D=1">Полная</a>
+                                        <span>18</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Boccupation%5D%5Bpart%5D=1">Частичная</a>
+                                        <span>4</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Boccupation%5D%5Bonce%5D=1">Разовая</a>
+                                        <span>3</span>
+                                    </div>
+                                    <div class="relate-filter">Характер работы</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Bnature%5D%5Boffice%5D=1">На территории работодателя</a>
+                                        <span>19</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bnature%5D%5Bremote%5D=1">Работа на дому</a>
+                                        <span>6</span>
+                                    </div>
+                                    <!--div class="filter">
+                                        <a href="?search%5Bnature%5D%5Btravel%5D=1">Разъездной</a>
+                                        <span>1</span>
+                                    </div-->
+                                    <div class="relate-filter">Уровень образования</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Beducation_vac%5D%5Bno-matter%5D=1">Не имеет значения</a>
+                                        <span>9</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Beducation_vac%5D%5Bprof-tech%5D=1">Профессионально-техническое образование и ниже</a>
+                                        <span>10</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Beducation_vac%5D%5Bpart-high%5D=1">Средне специальное образование и ниже</a>
+                                        <span>20</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Beducation_vac%5D%5Bhigh%5D=1">Высшее образование и ниже</a>
+                                        <span>20</span>
+                                    </div>
+                                    <div class="relate-filter">Опыт работы</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Bexperience_vac%5D%5Bno-matter%5D=1">Не имеет значения</a>
+                                        <span>3</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bexperience_vac%5D%5Bfrom-1%5D=1">До 2 лет</a>
+                                        <span>6</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bexperience_vac%5D%5Bfrom-2%5D=1">До 3 лет</a>
+                                        <span>15</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bexperience_vac%5D%5Bfrom-3%5D=1">До 5 лет</a>
+                                        <span>20</span>
+                                    </div>
+                                    <!--div class="filter">
+                                        <a href="?search%5Bexperience_vac%5D%5Bfrom-5%5D=1">Более 5 лет</a>
+                                        <span>38</span>
+                                    </div-->
+                                    <div class="relate-filter">Студент</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Bstudent%5D%5Bno%5D=1">Нет</a>
+                                        <span>7</span>
+                                    </div>
+                                    <div class="filter">
+                                        <a href="?search%5Bstudent%5D%5Byes%5D=1">Можно</a>
+                                        <span>13</span>
+                                    </div>
+                                    <div class="relate-filter">Город</div>
+
+                                    <div class="filter">
+                                        <a href="?search%5Bcity%5D%5B%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%5D=1">Минск</a>
+                                        <span>17</span>
+                                    </div>
+
+
+                                        <!--div class="filter">
+                                        <a href="?search%5Bcity%5D%5B%D0%91%D1%80%D0%B5%D1%81%D1%82%5D=1">Брест</a>
+                                        <span>1</span>
+                                    </div-->
+
+
+                                        <div class="filter">
+                                        <a href="?search%5Bcity%5D%5B%D0%9C%D0%BE%D0%B3%D0%B8%D0%BB%D0%B5%D0%B2%5D=1">Могилев</a>
+                                        <span>1</span>
+                                    </div>
+
+
+                                        <!--div class="filter">
+                                        <a href="?search%5Bcity%5D%5B%D0%93%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%5D=1">Гродно</a>
+                                        <span>1</span>
+                                    </div-->
+
+
+                                        <div class="filter">
+                                        <a href="?search%5Bcity%5D%5B%D0%93%D0%BE%D0%BC%D0%B5%D0%BB%D1%8C%5D=1">Витебск</a>
+                                        <span>2</span>
+                                    </div>
+
+
+
+                              </div>
+
+                                    
+		                </div>
+		                </div>
+		            </div>
+		            <div class="search_greed_col2">
+                    <div style="display: block">
+		                <div class="head_catalog">    
+		                    <h2 style="margin-top: 0; margin-bottom: 20px;">Программист PHP</h2>
+		                    <a href="#" >Каталог вакансий</a>
+		                    <p style="margin: 15px 0 15px 0">
+                                <span>→ IT / Интернет / Телеком</span> → 
+                                <a href="#">IT, Интернет, телеком</a>
+                            </p>
+                             <div >
+	                       <div class="search-list__count">
+	                           Найдено: 
+	                           <span class="" style="font-size: 12px;font-style: italic;color: #7c7c7c;">20</span>
+	                       </div>
+	                        <span class="sortable table-ajax-control no-scroll">
+				                <div class="search-list__sortable sortable-dropdown dropdown">
+								    Сортировать
+								    <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							            <span>по дате обновления</span>
+							            <i class="caret"></i>
+						            </span>
+								    <ul class="sortable-dropdown-menu dropdown-menu" role="menu">
+								        <li class="checked">
+                                            <span>по дате обновления</span>
+                                        </li>
+            							<li>
+            							    <a href="#">по возрастанию зарплаты</a>
+            							 </li>
+								        <li>
+								            <a href="#">по убыванию зарплаты</a>
+								        </li>
+								    </ul>
+		                        </div>
+			                 </span>
+                            </div>
+                            <div class="search-list__top-separator"></div>
+		                </div>
+		               
+		              
+		                
+		                </div>
+		                <div class="l_search-greed">
+	<div class="l_search-greed__column-3">
+		<span id="table-current-uri" data-current-uri="?"></span>
+
+					<ul class="search-list">
+				
+					<li class="premium vac-small">
+																										
+	<div class="vac-small__column vac-small__column_1"></div>
+
+<div class="vac-small__column vac-small__column_2">
+
+	<div>
+		</div>
+
+			<div class="employer-logo">
+						<a href="#">
+				<img src="img/companies/profigrupp.jpg" alt="Логотип организации - Профигруп">
+			</a>
+		</div>
+	
+
+	<div>
+		<a class="vac-small__title" href="#">Маркетолог</a>
+
+			</div>
+
+			<div class="vac-small__salary">
+		<span class="salary-dotted">
+			500			руб.		</span>
+							<span class="salary-up">+</span>
+					</div>
+	
+	<div class="vac-small__experience">
+					<div class="vac-small__experience-item"><i class="icon-signal"></i>Опыт работы не имеет значения</div>
+		
+					<div class="vac-small__experience-item"><i class="icon-graduation-cap"></i>Высшее образование</div>
+			</div>
+
+
+
+
+
+
+	<div class="vac-small__upd">
+				<a href="#">ОДО «Профигруп»</a>
+                    <span  style="padding-left: 8px">|</span>
+					<div class="vac-small__city">
+				<i></i><span style="color:#4b4f54;">Минск</span>
+			</div>
+		            <span style="padding-right: 8px">|</span>
+		<span class="nowrap">24 февраля 2017, 16:04</span>
+	</div>
+</div>
+
+
+											</li>
+				
+
+				
+					<li class="free vac-small">
+																										
+	<div class="vac-small__column vac-small__column_1"></div>
+
+<div class="vac-small__column vac-small__column_2">
+
+	<div>
+		</div>
+
+	
+
+	<div>
+		<a class="vac-small__title" href="#">Менеджер по продаже косметики</a>
+
+			</div>
+
+			<div class="vac-small__salary">
+		<span class="salary-dotted">
+			700			руб.		</span>
+					</div>
+	
+	<div class="vac-small__experience">
+					<div class="vac-small__experience-item"><i class="icon-signal"></i>Опыт работы не имеет значения</div>
+		
+					<div class="vac-small__experience-item"><i class="icon-graduation-cap"></i>Высшее образование</div>
+			</div>
+
+
+
+
+
+	<div class="vac-small__upd">
+				<a href="#">ООО «Глобал бизнес»</a>
+                    <span  style="padding-left: 8px">|</span>
+					<div class="vac-small__city">
+				<i></i><span style="color:#4b4f54;">Минск</span>
+			</div>
+		            <span style="padding-right: 8px">|</span>
+		<span class="nowrap">27 декабря 2016, 09:22</span>
+	</div>
+</div>
+
+
+											</li>
+				
+					<li class="free vac-small">
+																										
+	<div class="vac-small__column vac-small__column_1"></div>
+
+<div class="vac-small__column vac-small__column_2">
+
+	<div>
+		</div>
+
+	
+
+	<div>
+		<a class="vac-small__title" href="#">Специалист по рекламе</a>
+
+			</div>
+
+	
+	<div class="vac-small__experience">
+					<div class="vac-small__experience-item"><i class="icon-signal"></i>Опыт работы от 2 лет</div>
+		
+					<div class="vac-small__experience-item"><i class="icon-graduation-cap"></i>Образование не имеет значения</div>
+			</div>
+
+
+
+
+
+	<div class="vac-small__upd">
+				<a href="#">ООО «ФК Ислочь»</a>
+                    <span  style="padding-left: 8px">|</span>
+					<div class="vac-small__city">
+				<i></i><span style="color:#4b4f54;">Минск</span>
+			</div>
+		            <span style="padding-right: 8px">|</span>
+		<span class="nowrap">21 декабря 2016, 12:48</span>
+	</div>
+</div>
+
+
+											</li>
+							</ul>
+
+			<div class="table-ajax-control">
+				<!--todo: иконки-->
+<div class="pagination"><ul class="pagination__list"><li class="pagination__item disabled"><span>
+		<i class="icon-fast-bw"></i>
+	</span></li><li class="pagination__item pagination__item_current disabled"><span>←</span></li><li class="pagination__item pagination__item_active"><span>1</span></li><li class="pagination__item"><a href="?page=2">2</a></li><li class="pagination__item"><a href="?page=2">→</a></li><li class="pagination__item"><a href="?page=2"><i class="icon-fast-fw"></i></a></li></ul><div class="pagination__count">Показано <span>1</span> – <span>30<span> из <span>31<span></span></span></span></span></div></div>			</div>
+				</div>
+	<div style="display: table-cell; width:29.5%;"><img src="img/22284.jpg" alt="" style="width: 87%;"></div>
+</div>
+		            </div>
+		        </div>      
+		    </div>    
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		    <footer class='text-foot'>
+		<div class=" footer-top">
+            <div class="inner-wrap-foot clearfix">
+                <div id="footer-fix">
+    			<div class='foot-menu'>
+    				<h3 class='foot-menu-top'>Правила пользования</h3>
+    				<ul class=''>
+    					<li>
+    						<a href="#">Пользовательское соглашение</a>
+    					</li>
+    					<li>	
+    						<a href="#">Политика конфеденциальности</a>
+    					</li>
+    					<li>	
+    						<a href="#">Правила размещения</a>
+    					</li>
+    					<li>	
+    						<a href="#">Публичный договор</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class='foot-menu'>
+    				<h3 class='foot-menu-top'>Обратная связь</h3>
+    				<ul class=''>
+    					<li>
+    						<a href="#">Тарифы и услуги</a>
+    					</li>
+    					<li>	
+    						<a href="#">Соглашение на размещение</a>
+    					</li>
+    					<li>	
+    						<a href="#">Реклама на сайте</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class='foot-menu'>
+    				<h3 class='foot-menu-top'>Работодателям</h3>
+    				<ul class=''>
+    					<li>
+    						<a href="#">Часто задаваемые вопросы</a>
+    					</li>
+    					<li>	
+    						<a href="#">Размещение резюме</a>
+    					</li>
+    					<li>	
+    						<a href="#">Контанткы</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class='foot-menu foot-menu-right'>
+    				<ul id='contacts'>
+    					<li>
+    						<a href="#"><i class='icon-vkontakte-rect' style="font-size: 18px"></i></a>
+    						<a href="#"><i class='icon-facebook-squared'></i></a>
+    						<a href="#"><i class='icon-twitter-squared'></i></a>
+    						<a href="#"><i class='icon-odnoklassniki-square'></i></a>
+    					</li>
+    					<li>	
+    						Работа salam.by
+    					</li>
+    					<li>	
+    						<span>+375(29) 668 21 15</span>
+    					</li>
+    				</ul>
+                </div>
+    			</div>
+            </div>
+		</div>
+		<div class="footer-bottom">
+			<div class="inner-wrap-foot">
+				<div style="padding-top:10px;">Rabota.salam.by 2017, ООО  &laquoАпроАвтоТех&raquo</div>
+				<div style="padding-bottom:10px;">УНП 77788999 Свидетельство о государственной регистрации выдано Мингорисполкомом решением от 11.08.2003 № 856</div>
+			</div>
+		</div>
+	</footer>
+	<style>
+        #mainNav 
+{
+	width: 100%;
+	border-top:solid 5px rgb(40,157,204);
+	background-color: rgb(35,35,35);
+    display: block;
+    height: 50px;
+}
+    .mainNavfixed {
+        position: fixed;
+        top: 0;
+        z-index: 101;
+    }
+        </style>
+    <script>
+(function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
+var a = document.querySelector('#mainNav'), b = null;  // селектор блока, который нужно закрепить
+window.addEventListener('scroll', Ascroll, false);
+document.body.addEventListener('scroll', Ascroll, false);  // если у html и body высота равна 100%
+function Ascroll() {
+  if (b == null) {  // добавить потомка-обёртку, чтобы убрать зависимость с соседями
+    var Sa = getComputedStyle(a, ''), s = '';
+    for (var i = 0; i < Sa.length; i++) {  // перечислить стили CSS, которые нужно скопировать с родителя
+      if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+        s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+      }
+    }
+    b = document.createElement('div');  // создать потомка
+    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+    a.insertBefore(b, a.firstChild);  // поместить потомка в цепляющийся блок первым
+    var l = a.childNodes.length;
+    for (var i = 1; i < l; i++) {  // переместить во вновь созданного потомка всех остальных потомков (итого: создан потомок-обёртка, внутри которого по прежнему работают скрипты)
+      b.appendChild(a.childNodes[1]);
+    }
+    a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
+    a.style.padding = '0';
+    a.style.border = '0';  // если элементу присвоен padding или border
+  }
+  if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
+    b.className = 'mainNavfixed';
+  } else {
+    b.className = '';
+  }
+  window.addEventListener('resize', function() {
+    a.children[0].style.width = getComputedStyle(a, '').width
+  }, false);  // если изменить размер окна браузера, измениться ширина элемента
+}
+})()
+</script>
+</body>
+</html>

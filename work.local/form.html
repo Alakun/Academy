@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <link href="css/animation.css" rel="stylesheet" type="text/css" />
+		<link href="css/fontello.css" rel="stylesheet" type="text/css" />
+		<link href="css/fontello-codes.css" rel="stylesheet" type="text/css" />
+		<link href="css/fontello-embedded.css" rel="stylesheet" type="text/css" />
+		<link href="css/fontello-ie7.css" rel="stylesheet" type="text/css" />
+		<link href="css/fontello-ie7-codes.css" rel="stylesheet" type="text/css" />   
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+           <header>
+			<div class='head-top'>
+				<div class='iner-wrap'>
+					<div id='date'>	
+						<script language="javascript" type="text/javascript"><!--
+							var d = new Date();
+
+							var day=new Array("Воскресенье","Понедельник","Вторник",
+							"Среда","Четверг","Пятница","Суббота");
+
+							var month=new Array("января","февраля","марта","апреля","мая","июня",
+							"июля","августа","сентября","октября","ноября","декабря");
+
+							document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()]
+							+ " " + d.getFullYear() + " г.");
+							//--></script>
+					</div>
+					<img src="">
+					<div id="social-links">
+						<a href="#">
+							<i class="icon-facebook"></i>
+						</a>
+						<a href="#">
+							<i class="icon-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="icon-youtube"></i>
+						</a>
+						<a href="#">
+							<i class="icon-vkontakte"></i>
+						</a>
+						<a href="#">
+							<i class="icon-odnoklassniki"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class='clearfix iner-wrap'>
+				<div class=" head-bot clearfix">
+					<div class="head-inner">
+						<a href='#'><img src="img/logo.png"></a>
+					</div>
+                    <div class='top-right'>
+                        <div id='logintop' class="head-inner">
+                            <i class='icon-users'></i>
+                            <button style="background: none; border: none; outline: 0; color:#5d4484; line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Вход</button>
+                            <span style="margin-left: 5px;margin-right: 5px;">|</span>
+                            <button style="background: none; border: none; outline: 0;color: #5d4484;line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Регистрация</button>
+                            <div id="myModal" class="modal fade">
+                            <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-applicant-auth modal-body">
+                <div id="login-error-area" class="alert alert-error alert_small"></div>
+                <section class="auth">
+                    <div class="auth__wrapper">
+                        <div class="auth__title h3-like registr-title">Вход</div>
+                        <!--script src="/forms/js/third-party/jquery.form.min.js" type="text/javascript"></script>
+                        <script src="/js/praca/auth-ajax-form.js" type="text/javascript"></script-->
+                        <form name="login-form" method="post" class="auth__form" id="login-form">
+                            <div>
+                                <dl>
+                                    <dt>E-mail <span class="red-star">*</span>  <span id="praca-login-help-email" class="help-icon" data-original-title="" title=""></span></dt>
+                                    <dd>
+                                        <input name="login-form[email]" type="text" maxlength="255" class="form-etc account-area auth__text-input">                                                                             </dd>
+                                        <dt>Пароль <span class="red-star">*</span>  <span id="praca-login-help-password" class="help-icon" data-original-title="" title=""></span></dt>
+                                        <dd>
+                                            <input name="login-form[password]" type="password" maxlength="16" class="form-etc xxx account-password auth__text-input">                                                                               </dd>
+                                            <dd id="web-forms__collection_dd_js-advanced-checkbox-58b687df2a428__item">
+                                                <label class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-check ui-state-checked ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span><div class="advanced-checkbox"><input name="login-form[remember]" type="checkbox" checked="checked" value="1" id="js-advanced-checkbox-58b687df2a428" class="ui-checkboxradio ui-helper-hidden-accessible"></div> запомнить меня <span id="praca-login-help-remember" class="help-icon" data-original-title="" title=""></span></label>                                                                                </dd>
+                                                <dd>
+                                                    <input name="login-form[referrer]" type="hidden" value="https://praca.by/">                                                                             </dd>
+                                                    <dd>
+                                                        <input type="submit" value="Войти" data-loading-text="Вход..." class="btn btn_green"><a class="forget-password" href="#" tabindex="-1">Забыли пароль?</a>                                                                             </dd>
+                                                    </dl>   </div>
+                                                </form>
+                                                <!--script type="text/javascript">web_forms__init_ajax_form('#login-form');</script>
+                                                <script>
+                                                    $(document).trigger('auth-event', ['', false]);
+
+                                                    Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-email'), 'login_email');
+                                                    Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-password'), 'login_password');
+                                                    Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-remember'), 'login_remember');
+
+                                                    $('#login-form input[type="checkbox"]').checkboxradio();
+                                                </script>                       <div class="social-binding social-binding_login">
+                                                <p class="social-binding__note social-binding__note_login">Вход через социальную сеть</p>
+                                                <ul class="social-binding__list clearfix">
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_google-plus" href="https://praca.by/social-auth/Google/"><i class="mdi mdi-google-plus"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_facebook" href="https://praca.by/social-auth/Facebook/"><i class="mdi mdi-facebook"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_twitter" href="https://praca.by/social-auth/Twitter/"><i class="mdi mdi-twitter"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_vk" href="https://praca.by/social-auth/Vkontakte/"><i class="mdi mdi-vk"></i></a></li>
+                                                    <li class="social-binding__item"><a class="social-icon social-icon_odnoklassniki" href="https://praca.by/social-auth/Odnoklassniki/"><i class="mdi mdi-odnoklassniki"></i></a></li>
+                                                </ul>
+                                            </div-->                  </div>
+
+                                            <div class="auth__wrapper js-dependent-auth js-default-auth">
+                                                <div class="reg-invite">
+                                                    <div class="reg-invite__wrapper">
+                                                        <div class="h3-like registr-title">Соискателям</div>
+                                                        <p class="reg-invite__description">
+                                                            <noindex>Зарегистрировавшись, соискатели могут
+                                                                размещать резюме и откликаться на заинтересовавшие их вакансии.</noindex>
+                                                            </p>
+                                                            <a href="#" class="btn btn_green">Регистрация соискателя</a>
+                                                        </div>
+
+                                                        <div class="reg-invite__wrapper">
+                                                            <div class="h3-like registr-title">Работодателям</div>
+                                                            <p class="reg-invite__description">
+                                                                <noindex>Зарегистрировавшись, работодатели могут размещать свои&nbsp;вакансии.</noindex>
+                                                            </p>
+                                                            <a href="#" class="btn btn_orange">Регистрация работодателя</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="auth__wrapper js-dependent-auth js-applicant-auth no-padding-right" style="display: none;">
+                                                    <div class="reg-applicant__wrapper">
+                                                        <div class="fff h3-like registr-title">Регистрация соискателя</div>
+                                                        <div class="text-gray">
+                                                            <noindex>Еще нет аккаунта? Зарегистрируйтесь!</noindex>
+                                                        </div>
+                                                        <div class="info-registr-cont">
+                                                            <div class="info-registr">
+                                                                <i class="svg svg-publish"></i>
+                                                                <span class="text-gray">Создавайте резюме</span>
+                                                            </div>
+                                                            <div class="info-registr">
+                                                                <i class="svg svg-laptop"></i>
+                                                                <span class="text-gray">Откликайтесь на вакансии</span>
+                                                            </div>
+                                                            <div class="info-registr">
+                                                                <i class="svg svg-mail"></i>
+                                                                <span class="text-gray">Получайте предложения от работодателей</span>
+                                                            </div>
+                                                        </div>
+                                                        <a href="#" class="btn btn_green btn_mrg-vertical">
+                                                            Регистрация соискателя                            </a>
+
+                                                            <p class="text-gray">Ищете сотрудников?
+                                                                <a href="#">Регистрация работодателя</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="auth__wrapper js-dependent-auth js-employer-auth no-padding-right" style="display: none;">
+                                                        <div class="reg-applicant__wrapper">
+                                                            <div class="asd h3-like registr-title">Регистрация работодателя</div>
+                                                            <div class="text-gray">
+                                                                <noindex>Еще нет аккаунта? Зарегистрируйтесь!</noindex>
+                                                            </div>
+                                                            <div class="info-registr-cont">
+                                                                <div class="info-registr">
+                                                                    <i class="svg svg-publish"></i>
+                                                                    <span class="text-gray">Размещайте вакансии</span>
+                                                                </div>
+                                                                <div class="info-registr">
+                                                                    <i class="svg svg-laptop"></i>
+                                                                    <span class="text-gray">Получайте отклики от соискателей</span>
+                                                                </div>
+                                                                <div class="info-registr">
+                                                                    <i class="svg svg-servises"></i>
+                                                                    <span class="text-gray">Воспользуйтесь дополнительными услугами портала</span>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn btn_green btn_mrg-vertical">
+                                                                Регистрация работодателя                            </a>
+
+                                                                <p class="text-gray">Ищете работу?
+                                                                    <a href="#">Регистрация соискателя</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">
+                                                <i class="mdi mdi-close">Close</i></button>
+                                                </div>
+                                            </div>
+                        </div>
+                        </div>
+                        
+                        
+                        
+                        <div id='' class="clearfix">
+                            <span style="float: right;">
+                                <i class='icon-dollar'></i>
+                                Выбор валюты
+                                <i class="icon-angle-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="info" style="float: left;">
+    					<div id='weather' class="head-inner">
+    					
+    					</div>
+    					<div id='kurs' class="head-inner">
+    						<div id='kurs-money'>
+    						</div>
+    						<div id='kurs-fuel'>
+    						</div>
+    					</div>
+                    </div>
+				</div>
+			</div>
+			<div id="mainNav" >
+			
+				<div class="iner-wrap clearfix">
+					<ul class=menu>
+						<li style="background-color:#b30097;">	
+							<a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
+							</a>
+						</li>
+						<li>
+							<a href="#">Новости <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+							<ul class='submenu'>
+								<li>
+									<a href="#" style="width: 137.5px;">Актуальное</a>
+								</li>
+								<li>
+									<a href="#" style="width: 137.5px;">Происшествия</a>
+								</li>
+								<li>
+									<a href="#" style="width: 137.5px;">Это интересно</a>
+								</li>
+								<li>
+									<a href="#" style="width: 137.5px;">Шоубизнес</a>
+								</li>
+								<li>
+									<a href="#" style="width: 137.5px;">Авто News</a>
+								</li>
+								<li>
+									<a href="#" style="width: 137.5px;">IT-сфера</a>
+								</li>
+								<li>
+									<a href="#" style="width: 137.5px;">Все новости</a>
+								</li>
+							</ul>
+						</li>
+						<li>	
+							<a href="#">Форум</a>
+						</li>
+						<li>	
+							<a href="#">Стать партнером</a>
+						</li>
+						<li>	
+							<a href="#">Карты salam.by</a>
+						</li>
+						<li>	
+							<a href="#" class="visibl_li">Партнеры salam.by</a>
+						</li>
+						<li>	
+							<a href="#">Продукция</a>
+						</li>
+					</ul>
+					<ul class="menu_unvis">
+					    <li style="background-color:#b30097;">	
+							<a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
+							</a>
+						</li>
+						<li>
+						    <a href="#" class="icon-menu" style="padding-left:1px; padding-right:1px;"></a>
+						    <ul class="submenu_unvis">
+						        <li>
+									<a href="#" style="width: 137.5px;">Актуальное</a>
+						        </li>
+						        <li>
+									<a href="#" style="width: 137.5px;">Происшествия</a>
+								</li>
+								</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="findjob ">
+        	<div class="layer ">  
+           		<div class="iner-wrap">              
+	                <div class="search_box">
+						<form class="search_form">
+						  <div class="row" style="margin: 0;width: 100%; display: block;position: absolute;">
+                        <div class="sup_form">
+						    <div class="col-xs-6" style="width: 15%; padding: 0px; display: block;">
+						      <div class="input-group ">
+						        <div class="input-group-btn" style="width: 50%;">
+						          <button type="button" class="btn btn-default dropdown-toggle find" data-toggle="dropdown" aria-expanded="false" style=" width: 100%; margin: 0; border-radius: 4px 0px 0px 4px;     background: white;    outline: 0; text-align: left;">
+						            Вакансии <span class="caret" style="float: right; margin-top: 8px;"></span>
+						          </button>
+						          <ul class="dropdown-menu">
+						            <li><a href="#" rel="nofollow">Вакансии</a></li>
+						            <li><a href="#">Резюме</a></li>
+						          </ul>
+						        </div>
+
+                              </div>
+						    </div>
+						        <div class="inp_unvis" style="
+                                    display: block;
+                                    border-left: 1px solid #5F9EA0;
+                                    border-right: 1px solid #5F9EA0;
+                                    float: left;
+
+                                    ">
+						            <input type="text" class="form-control" placeholder="Найти вакансию, например: Менеджер" style="height: 44px; border-radius: 0px; border: none;">
+                                </div>
+                              </div>
+                               <div class="sup_form">
+                                <div class="param_unvis" data-toggle="modal"  style="height: inherit;width: 12%;white-space: nowrap;text-align: center;outline: 0;font-size: 100%;vertical-align: middle;border-right: 1px solid #5F9EA0;float: left; position: relative;line-height: 44px;">
+			                        
+  <div><button class="param_btn"><i class="icon-sliders"></i>Параметры</button></div>
+		                        </div>
+                                <div class="loc_unvis" style="width: 4%; height: 44px; white-space: nowrap;text-align: center;outline: 0;font-size: 1.0em;border-right: 1px solid #5F9EA0;float: left; position: relative;">
+  <i class="icon-location" style="
+    display: table-cell;
+    vertical-align: middle;
+"></i>
+		                        </div>
+                              </div>
+                                <div style="display: block;position: relative;float: left;width: 15%;">
+                                    <input name="form-submit-btn" type="submit" value="Найти" tabindex="5" class="search__submit js-search-bar-submit">
+						        </div>
+                        </div>
+				       </form>
+	      			</div>       
+	            <div class="ads">    
+	                <div class="hd">
+			            <h1>Найти работу с SALAM</h1>
+			        </div>
+			        <div class="num">
+			            <h2>Вакансий: 1244</h2>
+			            <h2>Резюме: 1368</h2>
+			        </div>
+			        <div class="ad">
+			            <div class="get_vak">
+			                <button class="but_vak button">Разместить вакансию</button>
+			            </div>
+			            <div class="get_res">
+			                <button class="but_res button">Разместить резюме</button>
+			            </div>
+			        </div>
+			    </div>
+		    </div>		    
+		</div>
+    </div>
+           <!--style>
+               form dd {
+    margin-bottom: 18px;
+}
+               form dl {
+    margin-top: 0;
+}
+               .advanced-radio-buttons {
+    margin-top: -6px;
+}
+               form .web-forms__collection-inline_item {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+               form .web-forms__collection-inline_item_component {
+    display: inline;
+    position: relative;
+}
+               input[type=radio] {
+    margin: 0;
+    vertical-align: middle;
+}
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+               form .web-forms__collection-inline_item_label {
+    display: inline-block;
+}
+               form .web-forms__collection-inline_item {
+    display: inline-block;
+    -right: 15px;
+    margin-bottom: 7px;
+}
+               form .web-forms__collection-inline_item_label {
+    display: inline-block;
+}
+               .advanced-radio-buttons .ui-checkboxradio-label.ui-checkboxradio-checked {
+    background-color: #e1f2d5;
+    box-shadow: inset 1px 1px 2px rgba(71,136,23,.49);
+}
+               .advanced-radio-buttons .ui-checkboxradio-label.ui-checkboxradio-checked {
+    background-color: #e1f2d5;
+    box-shadow: inset 1px 1px 2px rgba(71,136,23,.49);
+}
+               .advanced-radio-buttons .ui-checkboxradio-label {
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+               .ui-checkboxradio-label {
+    cursor: pointer;
+    font-weight: 400;
+    color: #212121;
+}
+               .ui-checkboxradio-label .ui-checkboxradio-icon {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    top: -2px;
+}
+               .ui-checkboxradio-label.ui-checkboxradio-radio-label .ui-checkboxradio-icon {
+    border-radius: 50%;
+}
+               .ui-checkboxradio-label .text {
+    border-bottom: 1px dotted;
+}
+               form dt {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+               .web-forms__collectionHorizontal > .web-forms__collection > .web-forms__collection_item {
+    float: left;
+}
+               form .web-forms__collection_item {
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+               form .web-forms__collection_item_label, form dt {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+               input[type=number], input[type=password], input[type=search], input[type=text] {
+    width: 271px;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    color: #212121;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+       .control-description:empty, .web-forms__collection_item_descriptions:empty {
+    width: 0;
+    margin-top: 0;
+}
+               .control-description, .web-forms__collection_item_descriptions {
+    width: 271px;
+    color: #7c7c7c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+               .web-forms__collection_item_messages:empty {
+    width: 0;
+}
+               .web-forms__collection_item_messages {
+    width: 271px;
+}
+               .web-forms__collectionHorizontal > .web-forms__collection > .web-forms__collection_item {
+    float: left;
+}
+
+form .web-forms__collection_item {
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+    </style-->
+    		<div class="l_column-main" role="main" style="max-width: 1210px;
+    margin: 0 auto;">
+			
+<div class="l_default-width">
+	<h1 class="no-margin-top">Регистрация работодателя</h1>
+
+	<div class="social-binding">
+		<p class="social-binding__note">Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи,
+	которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать.</p>
+
+		<ul class="social-binding__list clearfix">
+							<li class="social-binding__item"><a class="social-icon social-icon_activated social-icon_google-plus" href="https://praca.by/social-auth/Google/?attach=register-employer"><i class="mdi mdi-google-plus"></i><i class="mdi mdi-close"></i></a></li>
+							<li class="social-binding__item"><a class="social-icon social-icon_activated social-icon_facebook" href="https://praca.by/social-auth/Facebook/?attach=register-employer"><i class="mdi mdi-facebook"></i><i class="mdi mdi-close"></i></a></li>
+							<li class="social-binding__item"><a class="social-icon social-icon_activated social-icon_twitter" href="https://praca.by/social-auth/Twitter/?attach=register-employer"><i class="mdi mdi-twitter"></i><i class="mdi mdi-close"></i></a></li>
+							<li class="social-binding__item"><a class="social-icon social-icon_activated social-icon_vk" href="https://praca.by/social-auth/Vkontakte/?attach=register-employer"><i class="mdi mdi-vk"></i><i class="mdi mdi-close"></i></a></li>
+							<li class="social-binding__item"><a class="social-icon social-icon_activated social-icon_odnoklassniki" href="https://praca.by/social-auth/Odnoklassniki/?attach=register-employer"><i class="mdi mdi-odnoklassniki"></i><i class="mdi mdi-close"></i></a></li>
+					</ul>
+	</div>
+
+	<script type="text/javascript">$(Praca.Common.Cookie.checkCookie("employer-register"));</script>
+<link rel="Stylesheet" href="/forms/css/horizontal.css">
+<script type="text/javascript">
+			$(document).ready(function() {
+			    var select2Config = {
+                    escapeMarkup: function(m) { return m; },
+                    adaptDropdownCssClass: function(c) { return c; },
+                    language: 'ru',
+                };
+                
+                var parentModalId = $('.cities-select2-58c7faf8386eb').closest('div.modal').attr('id');
+                if (parentModalId !== undefined) {
+                    select2Config.dropdownParent = $('#' + parentModalId);
+                }
+			    
+				$('select.city-select2-selector').select2(select2Config);
+			});</script>
+<script type="text/javascript">
+				$(document).ready(function() {
+					$(".web-forms__dynamic_more span").on("click", function() {
+					    setTimeout(function(){$("input[type='checkbox'], input[type='radio']").checkboxradio()}, 100);
+					})
+				});
+			</script>
+<script type="text/javascript">
+			function reloadCaptcha() {
+				$('.captcha-img').attr('src', '/captcha/?rand=' + Math.random());
+			}
+		</script>
+<script type="text/javascript">
+			$(document).ready(function() {
+				var userAgreementEvent = function(object) {
+					var agreeForm = object.parents('form');
+
+					if(object.prop('checked')) {
+						$(agreeForm).find('input.btn[type="submit"]').removeAttr('disabled');
+					} else {
+						$(agreeForm).find('input.btn[type="submit"]').prop('disabled', true);
+					}
+				};
+
+				var userAgreementCheckbox = $('input.user-agreement-checkbox');
+				userAgreementEvent(userAgreementCheckbox);
+			
+				$('input.user-agreement-checkbox').change(function() { 
+					userAgreementEvent($(this));
+				});
+			});
+		</script>
+<form name="employer-register" class="f_registration" method="post">
+				<div>
+		<dl>
+			<dd>
+		<h3>Тип организации <span class="red-star">*</span></h3>																				</dd>
+			<dd>
+		<div >
+	<dl>
+			<dd id="web-forms__collection_dd_organization-control-type__item">
+		<div id="organization-control-type">
+	
+<div class="web-forms__collection-inline advanced-radio-buttons">
+				<div class="web-forms__collection-inline_item" id="js-advanced-radio-list-item-58c7faf8344af__item">
+		<div class="web-forms__collection-inline_item_component">
+			<input name="employer-register[organization-type]" type="radio" checked="checked" value="organization" id="js-advanced-radio-list-item-58c7faf8344af"/>		</div>
+				<div class="web-forms__collection-inline_item_label p-icon-js-advanced-radio-list-item-58c7faf8344af">
+<label for="js-advanced-radio-list-item-58c7fadbb40dc" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-radio-label ui-checkboxradio-checked ui-state-active"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span>
+					<span class="text">Юридическое лицо</span>
+				</label>
+		</div>
+						<div class="web-forms__collection-inline_item_descriptions"></div>
+						<div class="web-forms__collection-inline_item_messages"></div>
+			</div>
+				<div class="web-forms__collection-inline_item" id="js-advanced-radio-list-item-58c7faf834554__item">
+		<div class="web-forms__collection-inline_item_component">
+			<input name="employer-register[organization-type]" type="radio" value="individual" id="js-advanced-radio-list-item-58c7faf834554"/>		</div>
+				<div class="web-forms__collection-inline_item_label p-icon-js-advanced-radio-list-item-58c7faf834554">
+<label for="js-advanced-radio-list-item-58c7fadbb4183" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-radio-label"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span><span class="ui-checkboxradio-icon-space"> </span>
+					<span class="text">Индивидуальный предприниматель</span>
+				</label>
+		</div>
+						<div class="web-forms__collection-inline_item_descriptions"></div>
+						<div class="web-forms__collection-inline_item_messages"></div>
+			</div>
+	</div></div>																	<script>Praca.Forms.Validator.Handle.add('#organization-control-type', {"Required":[]});</script>			</dd>
+	</dl></div>																				</dd>
+			<dd>
+		<h3>Персональная информация</h3>																				</dd>
+			<dt id="web-forms__collection_dt_employer-register__email__item">E-mail <span class="red-star">*</span> </dt>
+		<dd id="web-forms__collection_dd_employer-register__email__item">
+		<input name="employer-register[email]" type="text" value="" class="praca-auto-focus" id="employer-register__email"/>																	<script>Praca.Forms.Validator.Handle.add('#employer-register__email', {"Required":[],"StringLength":{"max":255},"Email":[],"AjaxStandard":{"url":"\/ajax\/email-exists\/","marker":"email-exists-validator"}});</script>			</dd>
+			<dd id="web-forms__collection_dd_password-input-collection__item">
+		<div class="web-forms__collectionHorizontal" id="password-input-collection">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Пароль <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[password]" type="password" value=""/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Повтор пароля <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[password-repeat]" type="password" value=""/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+	</div></div>																	<script>Praca.Forms.Validator.Handle.add('#password-input-collection', {"Required":[],"PasswordRepeat":{"min":4,"max":16}});</script>			</dd>
+			<dd>
+		<div >
+	<dl>
+			<dd id="web-forms__collection_dd_fio-input-collection__item">
+		<div id="fio-input-collection">
+	<dl>
+			<dd>
+		<div class="web-forms__collectionHorizontal">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Фамилия <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[nameLast]" type="text" value="" class="nameLast" id="employer-register__nameLast"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#employer-register__nameLast', {"Required":{"state":true}});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Имя <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[nameFirst]" type="text" value="" class="nameFirst" id="employer-register__nameFirst"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#employer-register__nameFirst', {"Required":{"state":true}});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Отчество</div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[nameMiddle]" type="text" value="" class="nameMiddle" id="employer-register__nameMiddle"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#employer-register__nameMiddle', {"Required":{"state":false}});</script></div>
+					</div>
+	</div>
+	</div></div>																				</dd>
+	</dl></div>																	<script>Praca.Forms.Validator.Handle.add('#fio-input-collection', {"Fio":{"min":2,"max":50}});</script>			</dd>
+			<dd id="web-forms__collection_dd_employer-personal-info-collection__item">
+		<div id="employer-personal-info-collection">
+	<dl>
+			<dt id="web-forms__collection_dt_employer-register__personal__position__item">Должность <span class="red-star">*</span> </dt>
+		<dd id="web-forms__collection_dd_employer-register__personal__position__item">
+		<input name="employer-register[personal][position]" type="text" value="" id="employer-register__personal__position"/>																	<script>Praca.Forms.Validator.Handle.add('#employer-register__personal__position', {"Required":[],"StringLength":{"min":3,"max":255}});</script>			</dd>
+	</dl></div>																				</dd>
+	</dl></div>																				</dd>
+			<dd>
+		<h3>Информация об организации</h3>																				</dd>
+			<dd>
+		<div >
+	<dl>
+			<dd>
+		<div class="organization-basic-info">
+	<dl>
+			<dd id="web-forms__collection_dd_organization-base-collection__item">
+		<div class="web-forms__collectionHorizontal" id="organization-base-collection">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item" id="organization-control-ownership__item">
+				<div class="web-forms__collection_item_label">Наименование <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[ownership]" type="text" value="" id="organization-control-ownership" class="ownership"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">&nbsp;</div>
+				<div class="web-forms__collection_item_component">
+			<div >
+	<div class="org-quotes" style="line-height: 19pt;">«</div></div>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item" id="organization-control-organization__item">
+				<div class="web-forms__collection_item_label">&nbsp;</div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[organization]" type="text" value="" id="organization-control-organization" class="organization"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">&nbsp;</div>
+				<div class="web-forms__collection_item_component">
+			<div >
+	<div class="org-quotes" style="line-height: 19pt;">»</div></div>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+	</div></div>																	<script>Praca.Forms.Validator.Handle.add('#organization-base-collection', {"RequiredCollection":[],"OrganizationBase":{"ownership":{"max":50,"name":"ownership"},"organization":{"min":3,"max":255,"name":"organization"}},"OrganizationBaseAlert":{"ownership":{"max":10,"name":"ownership"}}});</script>			</dd>
+			<dd>
+		<div class="web-forms__collectionHorizontal organization-unp-cities">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">УНП <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[unp]" type="text" value="" id="employer-register__unp"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#employer-register__unp', {"Required":[],"Unp":[]});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_component">
+			<div class="cities-select2-58c7faf8386eb organization-city">
+	<dl>
+			<dt>Город <span class="red-star">*</span> </dt>
+		<dd>
+		<select name="employer-register[city]" class="city-select2-selector">
+		<option value="Минск"	>Минск</option>	<option value="Брест"	>Брест</option>	<option value="Витебск"	>Витебск</option>	<option value="Гродно"	>Гродно</option>	<option value="Гомель"	>Гомель</option>	<option value="Могилев"	>Могилев</option>	<option value="Барановичи"	>Барановичи</option>	<option value="Барань"	>Барань</option>	<option value="Белоозерск"	>Белоозерск</option>	<option value="Белыничи"	>Белыничи</option>	<option value="Береза"	>Береза</option>	<option value="Березино"	>Березино</option>	<option value="Березовка"	>Березовка</option>	<option value="Бешенковичи"	>Бешенковичи</option>	<option value="Бобруйск"	>Бобруйск</option>	<option value="Большая Берестовица"	>Большая Берестовица</option>	<option value="Борисов"	>Борисов</option>	<option value="Брагин"	>Брагин</option>	<option value="Браслав"	>Браслав</option>	<option value="Буда-Кошелево"	>Буда-Кошелево</option>	<option value="Быхов"	>Быхов</option>	<option value="Василевичи"	>Василевичи</option>	<option value="Верхнедвинск"	>Верхнедвинск</option>	<option value="Ветка"	>Ветка</option>	<option value="Вилейка"	>Вилейка</option>	<option value="Волковыск"	>Волковыск</option>	<option value="Воложин"	>Воложин</option>	<option value="Вороново"	>Вороново</option>	<option value="Высокое"	>Высокое</option>	<option value="Ганцевичи"	>Ганцевичи</option>	<option value="Глубокое"	>Глубокое</option>	<option value="Глуск"	>Глуск</option>	<option value="Горки"	>Горки</option>	<option value="Городок"	>Городок</option>	<option value="Давид-Городок"	>Давид-Городок</option>	<option value="Дзержинск"	>Дзержинск</option>	<option value="Дисна"	>Дисна</option>	<option value="Добруш"	>Добруш</option>	<option value="Докшицы"	>Докшицы</option>	<option value="Дрибин"	>Дрибин</option>	<option value="Дрогичин"	>Дрогичин</option>	<option value="Дубровно"	>Дубровно</option>	<option value="Дятлово"	>Дятлово</option>	<option value="Ельск"	>Ельск</option>	<option value="Жабинка"	>Жабинка</option>	<option value="Житковичи"	>Житковичи</option>	<option value="Жлобин"	>Жлобин</option>	<option value="Жодино"	>Жодино</option>	<option value="Заславль"	>Заславль</option>	<option value="Зельва"	>Зельва</option>	<option value="Иваново"	>Иваново</option>	<option value="Ивацевичи"	>Ивацевичи</option>	<option value="Ивье"	>Ивье</option>	<option value="Калинковичи"	>Калинковичи</option>	<option value="Каменец"	>Каменец</option>	<option value="Кировск"	>Кировск</option>	<option value="Клецк"	>Клецк</option>	<option value="Климовичи"	>Климовичи</option>	<option value="Кличев"	>Кличев</option>	<option value="Кобрин"	>Кобрин</option>	<option value="Копыль"	>Копыль</option>	<option value="Кореличи"	>Кореличи</option>	<option value="Корма"	>Корма</option>	<option value="Коссово"	>Коссово</option>	<option value="Костюковичи"	>Костюковичи</option>	<option value="Краснополье"	>Краснополье</option>	<option value="Кричев"	>Кричев</option>	<option value="Круглое"	>Круглое</option>	<option value="Крупки"	>Крупки</option>	<option value="Лельчицы"	>Лельчицы</option>	<option value="Лепель"	>Лепель</option>	<option value="Лида"	>Лида</option>	<option value="Лиозно"	>Лиозно</option>	<option value="Логойск"	>Логойск</option>	<option value="Лоев"	>Лоев</option>	<option value="Лунинец"	>Лунинец</option>	<option value="Любань"	>Любань</option>	<option value="Ляховичи"	>Ляховичи</option>	<option value="Малорита"	>Малорита</option>	<option value="Марьина Горка"	>Марьина Горка</option>	<option value="Микашевичи"	>Микашевичи</option>	<option value="Миоры"	>Миоры</option>	<option value="Мозырь"	>Мозырь</option>	<option value="Молодечно"	>Молодечно</option>	<option value="Мосты"	>Мосты</option>	<option value="Мстиславль"	>Мстиславль</option>	<option value="Мядель"	>Мядель</option>	<option value="Наровля"	>Наровля</option>	<option value="Несвиж"	>Несвиж</option>	<option value="Новогрудок"	>Новогрудок</option>	<option value="Новолукомль"	>Новолукомль</option>	<option value="Новополоцк"	>Новополоцк</option>	<option value="Октябрьский"	>Октябрьский</option>	<option value="Орша"	>Орша</option>	<option value="Осиповичи"	>Осиповичи</option>	<option value="Островец"	>Островец</option>	<option value="Ошмяны"	>Ошмяны</option>	<option value="Петриков"	>Петриков</option>	<option value="Пинск"	>Пинск</option>	<option value="Полоцк"	>Полоцк</option>	<option value="Поставы"	>Поставы</option>	<option value="Пружаны"	>Пружаны</option>	<option value="Речица"	>Речица</option>	<option value="Рогачев"	>Рогачев</option>	<option value="Россоны"	>Россоны</option>	<option value="Ружаны"	>Ружаны</option>	<option value="Светлогорск"	>Светлогорск</option>	<option value="Свислочь"	>Свислочь</option>	<option value="Сенно"	>Сенно</option>	<option value="Скидель"	>Скидель</option>	<option value="Славгород"	>Славгород</option>	<option value="Слоним"	>Слоним</option>	<option value="Слуцк"	>Слуцк</option>	<option value="Смолевичи"	>Смолевичи</option>	<option value="Сморгонь"	>Сморгонь</option>	<option value="Солигорск"	>Солигорск</option>	<option value="Старые Дороги"	>Старые Дороги</option>	<option value="Столбцы"	>Столбцы</option>	<option value="Столин"	>Столин</option>	<option value="Толочин"	>Толочин</option>	<option value="Туров"	>Туров</option>	<option value="Узда"	>Узда</option>	<option value="Ушачи"	>Ушачи</option>	<option value="Фаниполь"	>Фаниполь</option>	<option value="Хойники"	>Хойники</option>	<option value="Хотимск"	>Хотимск</option>	<option value="Чаусы"	>Чаусы</option>	<option value="Чашники"	>Чашники</option>	<option value="Червень"	>Червень</option>	<option value="Чериков"	>Чериков</option>	<option value="Чечерск"	>Чечерск</option>	<option value="Шарковщина"	>Шарковщина</option>	<option value="Шклов"	>Шклов</option>	<option value="Шумилино"	>Шумилино</option>	<option value="Щучин"	>Щучин</option></select>																				</dd>
+	</dl></div>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+	</div></div>																				</dd>
+	</dl></div>																				</dd>
+			<dt id="web-forms__collection_dt_employer-register__law-address__item">Юридический адрес (местонахождение) <span class="red-star">*</span> </dt>
+		<dd id="web-forms__collection_dd_employer-register__law-address__item">
+		<input name="employer-register[law-address]" type="text" value="" class="law-address" id="employer-register__law-address"/>																	<script>Praca.Forms.Validator.Handle.add('#employer-register__law-address', {"Required":[],"StringLength":{"min":10,"max":150}});</script>			</dd>
+	</dl></div>																				</dd>
+			<dd>
+		<h3>Контакты</h3>
+						<p>Обратите внимание, что все номера телефонов проходят проверку: ваши вакансии не будут видны пользователям сайта,
+						пока у организации не будет хотя бы одного проверенного номера телефона.</p>																				</dd>
+			<dt id="web-forms__collection_dt_primary-number-field__item">Основной номер телефона <span id="employer-register-primary-contact" class="help-icon"></span></dt>
+		<dd id="web-forms__collection_dd_primary-number-field__item">
+		<div id="primary-number-field">
+	<dl>
+			<dd id="web-forms__collection_dd_primary-contact__item">
+		<div class="web-forms__collectionHorizontal" id="primary-contact">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Телефон <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[primary-contact][value]" type="text" value="" class="form-etc praca-contact-value" id="employer-register__primary-contact__value"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#employer-register__primary-contact__value', {"Required":[]});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item" id="contact-show-checkbox-label__item">
+				<div class="web-forms__collection_item_label">&nbsp;</div>
+				<div class="web-forms__collection_item_component">
+			<div class='advanced-checkbox'><input name="employer-register[primary-contact][show]" type="checkbox" checked="checked" value="1" id="contact-show-checkbox-label" class="f_webform__checkbox"/></div><label for="contact-show-checkbox-label">Показывать на странице организации</label>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+	</div></div><p>При необходимости этот номер может быть использован менеджерами портала Praca.by для связи
+									с вашей организацией</p>																	<script>Praca.Forms.Validator.Handle.add('#primary-contact', {"Contacts":{"url":"\/ajax\/phone-validator\/","contactType":"phone"}});</script>			</dd>
+	</dl></div>																				</dd>
+			<dt id="web-forms__collection_dt_additional-contacts__item">Другие способы связи <span id="employer-register-secondary-contact" class="help-icon"></span></dt>
+		<dd id="web-forms__collection_dd_additional-contacts__item">
+		<div id="additional-contacts">
+	<div class="web-forms__dynamic_canvas">
+				<div class="web-forms__dynamic_canvas_row">
+			<div class="web-forms__dynamic_canvas_row_internal">
+					<div class="web-forms__collectionHorizontal praca-contacts-row">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item" id="praca-contact-type-0__item">
+				<div class="web-forms__collection_item_label">Тип</div>
+				<div class="web-forms__collection_item_component">
+			<select name="employer-register[contacts][0][type]" id="praca-contact-type-0" class="praca-contact-type">
+		<option value="phone" selected="selected"	>Телефон</option>	<option value="email"	>E-mail</option>	<option value="skype"	>Skype</option>	<option value="icq"	>ICQ</option>	<option value="jabber"	>Jabber/GTalk</option>	<option value="mailru"	>Mail.Ru Агент</option></select>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#praca-contact-type-0', {"Contacts":{"url":"\/ajax\/phone-validator\/"}});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item" id="praca-contact-value-0__item">
+				<div class="web-forms__collection_item_label">Значение</div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[contacts][0][value]" type="text" value="" id="praca-contact-value-0" class="form-etc praca-contact-value"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#praca-contact-value-0', {"Contacts":{"url":"\/ajax\/phone-validator\/"}});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item" id="show-0__item">
+				<div class="web-forms__collection_item_label">&nbsp;</div>
+				<div class="web-forms__collection_item_component">
+			<div class='advanced-checkbox'><input name="employer-register[contacts][0][show]" type="checkbox" checked="checked" value="1" id="show-0" class="f_webform__checkbox"/></div><label for="show-0">Показывать на странице организации</label>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[contacts][0][dynId]" type="hidden" value=""/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+	</div></div>
+						<script type="text/javascript">
+						if (typeof newRow != "undefined") {
+							Praca.Forms.Common.Contacts.handle($(newRow));
+						}
+						</script>
+								</div>
+			<div class="web-forms__dynamic_canvas_row_less link_icon"><i class="pri-delete"></i><span class="text">Удалить</span></div>
+		</div>
+			</div>
+	<fieldset class="web-forms__dynamic_template" disabled="disabled" style="display:none;">
+		<div class="web-forms__dynamic_template_row">
+			<div class="web-forms__dynamic_template_row_internal"></div>
+			<div class="web-forms__dynamic_template_row_less link_icon"><i class="pri-delete"></i><span class="text">Удалить</span></div>
+		</div>
+	</fieldset>
+	<div class="web-forms__dynamic_more link_icon ctrl__add"><i class="pri-add"></i><span class="text">Добавить контакт</span></div>
+</div>
+<script type="text/javascript">
+	(function()
+	{
+		// - Init functions -
+		var hasClass = function(tag, className)
+		{
+			return (' ' + tag.className + ' ').indexOf(' ' + className + ' ') > -1;
+		};
+		var getFirstChildByClassName = function(element, className)
+		{
+			if (element.hasChildNodes())
+			{
+				var children = element.childNodes;
+				for (var i = 0; i < children.length; i++)
+				{
+					if(hasClass(children[i], className))
+					{
+						return children[i];
+					}
+				}
+			}
+
+			 return undefined;
+		};
+
+		// - Init variables -
+		var id = 'additional-contacts';
+		var componentBlock = document.getElementById(id);
+		var templateContainer = getFirstChildByClassName(componentBlock, 'web-forms__dynamic_template');
+		var rowTemplate = getFirstChildByClassName(templateContainer, 'web-forms__dynamic_template_row');
+		var iteration = 1;
+		var itemsCount = 1;
+		var minItemsCount = undefined;
+		var maxItemsCount = undefined;
+
+		var template = "<div class=\"web-forms__collectionHorizontal praca-contacts-row\">\n\t<div class=\"web-forms__collection\">\n\t\t<div class=\"web-forms__collection_item\" id=\"praca-contact-type-%##WF-PLCHDR##%__item\">\n\t\t\t\t<div class=\"web-forms__collection_item_label\">\u0422\u0438\u043f<\/div>\n\t\t\t\t<div class=\"web-forms__collection_item_component\">\n\t\t\t<select name=\"employer-register[contacts][%##WF-PLCHDR-IT-additional-contacts##%][type]\" id=\"praca-contact-type-%##WF-PLCHDR##%\" class=\"praca-contact-type\">\n\t\t<option value=\"phone\"\t>\u0422\u0435\u043b\u0435\u0444\u043e\u043d<\/option>\t<option value=\"email\"\t>E-mail<\/option>\t<option value=\"skype\"\t>Skype<\/option>\t<option value=\"icq\"\t>ICQ<\/option>\t<option value=\"jabber\"\t>Jabber\/GTalk<\/option>\t<option value=\"mailru\"\t>Mail.Ru \u0410\u0433\u0435\u043d\u0442<\/option><\/select>\t\t\t\t\t\t<div class=\"web-forms__collection_item_descriptions\"><\/div>\n\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_messages\"><\/div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_footer\"><script>Praca.Forms.Validator.Handle.add('#praca-contact-type-%##WF-PLCHDR##%', {\"Contacts\":{\"url\":\"\\\/ajax\\\/phone-validator\\\/\"}});<\/script><\/div>\n\t\t\t\t\t<\/div>\n\t<\/div>\n\t\t<div class=\"web-forms__collection_item\" id=\"praca-contact-value-%##WF-PLCHDR##%__item\">\n\t\t\t\t<div class=\"web-forms__collection_item_label\">\u0417\u043d\u0430\u0447\u0435\u043d\u0438\u0435<\/div>\n\t\t\t\t<div class=\"web-forms__collection_item_component\">\n\t\t\t<input name=\"employer-register[contacts][%##WF-PLCHDR-IT-additional-contacts##%][value]\" type=\"text\" id=\"praca-contact-value-%##WF-PLCHDR##%\" class=\"form-etc praca-contact-value\"\/>\t\t\t\t\t\t<div class=\"web-forms__collection_item_descriptions\"><\/div>\n\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_messages\"><\/div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_footer\"><script>Praca.Forms.Validator.Handle.add('#praca-contact-value-%##WF-PLCHDR##%', {\"Contacts\":{\"url\":\"\\\/ajax\\\/phone-validator\\\/\"}});<\/script><\/div>\n\t\t\t\t\t<\/div>\n\t<\/div>\n\t\t<div class=\"web-forms__collection_item\" id=\"show-%##WF-PLCHDR##%__item\">\n\t\t\t\t<div class=\"web-forms__collection_item_label\">&nbsp;<\/div>\n\t\t\t\t<div class=\"web-forms__collection_item_component\">\n\t\t\t<div class='advanced-checkbox'><input name=\"employer-register[contacts][%##WF-PLCHDR-IT-additional-contacts##%][show]\" type=\"checkbox\" checked=\"checked\" value=\"1\" id=\"show-%##WF-PLCHDR##%\" class=\"f_webform__checkbox\"\/><\/div><label for=\"show-%##WF-PLCHDR##%\">\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0438<\/label>\t\t\t\t\t\t<div class=\"web-forms__collection_item_descriptions\"><\/div>\n\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_messages\"><\/div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_footer\"><\/div>\n\t\t\t\t\t<\/div>\n\t<\/div>\n\t\t<div class=\"web-forms__collection_item\">\n\t\t\t\t<div class=\"web-forms__collection_item_component\">\n\t\t\t<input name=\"employer-register[contacts][%##WF-PLCHDR-IT-additional-contacts##%][dynId]\" type=\"hidden\"\/>\t\t\t\t\t\t<div class=\"web-forms__collection_item_descriptions\"><\/div>\n\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_messages\"><\/div>\n\t\t\t\t\t\t\t\t\t\t<div class=\"web-forms__collection_item_footer\"><\/div>\n\t\t\t\t\t<\/div>\n\t<\/div>\n\t<\/div><\/div>\n\t\t\t\t\t\t<script type=\"text\/javascript\">\n\t\t\t\t\t\tif (typeof newRow != \"undefined\") {\n\t\t\t\t\t\t\tPraca.Forms.Common.Contacts.handle($(newRow));\n\t\t\t\t\t\t}\n\t\t\t\t\t\t<\/script>\n\t\t\t\t\t";
+		var regexp = /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g;
+		var placeholder = '%##WF-PLCHDR##%'
+			.replace(regexp, "\\$&");
+		var posIterPlaceholder = '%##WF-PLCHDR-IT-additional-contacts##%'
+			.replace(regexp, "\\$&");
+
+		var moreLink = getFirstChildByClassName(componentBlock, 'web-forms__dynamic_more');
+
+		var removeFunction = function()
+		{
+			
+			if (minItemsCount && itemsCount <= minItemsCount) return;
+
+			var currentRow = this.parentNode;
+			currentRow.parentNode.removeChild(currentRow);
+
+			itemsCount--;
+
+			if (maxItemsCount && itemsCount < maxItemsCount) {
+				moreLink.style.display = 'block';
+			}
+
+					};
+
+		// - Init state -
+		// All less-links
+		var canvas = getFirstChildByClassName(componentBlock, 'web-forms__dynamic_canvas');
+		if (canvas.hasChildNodes())
+		{
+			var canvasRows = canvas.childNodes;
+			for (var i = 0; i < canvasRows.length; i++)
+			{
+				if (hasClass(canvasRows[i], 'web-forms__dynamic_canvas_row'))
+				{
+					var existedLessLink = getFirstChildByClassName(canvasRows[i], 'web-forms__dynamic_canvas_row_less');
+					existedLessLink.onclick = removeFunction;
+				}
+			}
+		}
+
+		// More-link
+		moreLink.onclick = function()
+		{
+			if (maxItemsCount && itemsCount >= maxItemsCount) return;
+
+			
+			var newRow = rowTemplate.cloneNode(true);
+			var newRowInner = getFirstChildByClassName(newRow, 'web-forms__dynamic_template_row_internal');
+			newRowInner.innerHTML = template.replace(new RegExp(placeholder, 'g'), iteration)
+				.replace(new RegExp(posIterPlaceholder, 'g'), iteration++);
+			canvas.appendChild(newRow);
+
+			// Execute all scripts
+			var scripts = newRowInner.getElementsByTagName('script');
+			for (var i = 0; i < scripts.length; i++)
+			{
+				if (scripts[i].innerHTML != '')
+				{
+					var s = '(function(newRow) {' + scripts[i].innerHTML + '})(newRow);';
+					eval(s);
+				}
+			}
+
+			var newLessLink = getFirstChildByClassName(newRow, 'web-forms__dynamic_template_row_less');
+			newLessLink.onclick = removeFunction;
+
+			itemsCount++;
+
+			if (maxItemsCount && itemsCount >= maxItemsCount) {
+				moreLink.style.display = 'none';
+			}
+
+					}
+	})();
+</script>																				</dd>
+			<dd id="web-forms__collection_dd_captcha-area__item">
+		<div class="web-forms__collectionHorizontal captcha" id="captcha-area">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_component">
+			<img src="/captcha/?64292"
+						alt="Включите отображение картинок!" class="captcha-img" />
+						<div>
+						<span class="captcha-reload link-dotted_icon" onclick="reloadCaptcha()">
+							<i class="mdi mdi-reload"></i> <span class="text">Обновить код</span>
+						</div>
+											<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">Введите код с картинки <span class="red-star">*</span> </div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[captcha-key]" type="text" value="" class="captcha-input" id="employer-register__captcha-key"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#employer-register__captcha-key', {"Required":[],"StringLength":{"max":10}});</script></div>
+					</div>
+	</div>
+	</div></div>																				</dd>
+			<dd>
+		<div class="web-forms__collectionHorizontal">
+	<div class="web-forms__collection">
+		<div class="web-forms__collection_item" id="applicant-register-button__item">
+				<div class="web-forms__collection_item_component">
+			<input type="submit" value="Зарегистрироваться" data-loading-text="Регистрация..." class="btn btn_green" id="applicant-register-button"/>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"><script>Praca.Forms.Validator.Handle.add('#applicant-register-button', {"Submit":{"events":"click"}});</script></div>
+					</div>
+	</div>
+		<div class="web-forms__collection_item">
+				<div class="web-forms__collection_item_label">&nbsp;</div>
+				<div class="web-forms__collection_item_component">
+			<input name="employer-register[user-agreement]" type="checkbox" value="1" class="user-agreement-checkbox" id="employer-register__user-agreement"/><label for="employer-register__user-agreement"> С условиями <a href="/info/polzovatelskoe-soglashenie" 
+								target="_blank">Пользовательского соглашения</a> ознакомлен</label>						<div class="web-forms__collection_item_descriptions"></div>
+									<div class="web-forms__collection_item_messages"></div>
+										<div class="web-forms__collection_item_footer"></div>
+					</div>
+	</div>
+	</div></div>																				</dd>
+	</dl>	</div>
+			</form>
+	<script>
+		$('form[name=employer-register]').on('submit', function() {
+			ga('send', 'event', 'Knopka', 'Register_employer');
+			return true;
+		})
+	</script>
+
+	<div id="organization-duplicate" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="modal-close" aria-hidden="true" data-dismiss="modal" type="button">
+						<i class="mdi mdi-close"></i></button>
+					<h1 class="modal-title">Возможно, ваша компания уже зарегистрирована</h1>
+				</div>
+				<div class="modal-body"  style="width: 620px;">
+					<p class="unp">
+						Введенный вами УНП <span class="unp"></span> совпадает с УНП уже зарегистрированной организации <span class="name"></span>.					</p>
+					<p class="name">
+						Указанное вами название совпадает с названием уже зарегистрированной организации <span class="name"></span>.					</p>
+					<p>
+						<b>Обратите внимание!</b> <a href="https://praca.by/info/polzovatelskoe-soglashenie/" target="_blank">Правила портала Praca.by</a> запрещают повторную регистрацию одной и той же организации. Организация, зарегистрированная повторно, не будет активирована и не сможет публиковать вакансии и отправлять предложения соискателям.					</p>
+					<p>
+						<b>Что делать?</b>
+					</p>
+					<p class="unp">
+						1. Если это не ваша компания, проверьте введенный УНП. Вы указали УНП <span class="unp"></span>.					</p>
+					<p class="name">
+						1. Если это не ваша компания, проверьте правильность указанного названия. Вы указали название «<span class="input-name"></span>».					</p>
+					<p>
+						2. Если это ваша компания, попытайтесь восстановить доступ к её учётной записи. Возможно, ваша организация была зарегистрирована другим сотрудником — попробуйте обратиться к руководству вашей компании или в отдел кадров за дополнительной информацией. Если вы знаете e-mail, указанный при регистрации прежней учётной записи, но забыли пароль, вы можете воспользоваться <a href="https://praca.by/password-recovery/">формой восстановления пароля</a>.					</p>
+					<p>
+						3. Если у вас нет возможности восстановить доступ к аккаунту, свяжитесь с нами по почте <a href="mailto:moderator@praca.by">moderator@praca.by</a> или по телефону <nobr>+375 (17) 388-35-89</nobr>. Мы поможем вам восстановить вашу учетную запись.					</p>
+				</div>
+				<div class="modal-footer" style="margin-top: 20px">
+					<button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn_green">
+						Продолжить регистрацию					</button>
+					<button type="button" data-src="https://praca.by/" class="home btn btn_green">
+						Вернуться на главную					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		Praca.Employer.Organization.TypeChanger.prepareForm();
+		Praca.Employer.Organization.Duplicates.init(
+			'#organization-duplicate',
+			'input[name="employer-register[organization]"]',
+			'input[name="employer-register[unp]"]',
+			'https://praca.by/organization/duplicate/',
+			'https://praca.by/organization/organizationId/'
+		);
+	</script>
+</div>		</div>
+    <footer class='text-foot'>
+		<div class=" footer-top">
+            <div class="iner-wrap clearfix">
+                <div id="footer-fix">
+    			<div class='foot-menu'>
+    				<h3 class='foot-menu-top'>Правила пользования</h3>
+    				<ul class=''>
+    					<li>
+    						<a href="#">Пользовательское соглашение</a>
+    					</li>
+    					<li>	
+    						<a href="#">Политика конфеденциальности</a>
+    					</li>
+    					<li>	
+    						<a href="#">Правила размещения</a>
+    					</li>
+    					<li>	
+    						<a href="#">Публичный договор</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class='foot-menu'>
+    				<h3 class='foot-menu-top'>Обратная связь</h3>
+    				<ul class=''>
+    					<li>
+    						<a href="#">Тарифы и услуги</a>
+    					</li>
+    					<li>	
+    						<a href="#">Соглашение на размещение</a>
+    					</li>
+    					<li>	
+    						<a href="#">Реклама на сайте</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class='foot-menu'>
+    				<h3 class='foot-menu-top'>Работодателям</h3>
+    				<ul class=''>
+    					<li>
+    						<a href="#">Часто задаваемые вопросы</a>
+    					</li>
+    					<li>	
+    						<a href="#">Размещение резюме</a>
+    					</li>
+    					<li>	
+    						<a href="#">Контанткы</a>
+    					</li>
+    				</ul>
+    			</div>
+    			<div class='foot-menu foot-menu-right'>
+    				<ul id='contacts'>
+    					<li>
+    						<a href="#"><i class='icon-vkontakte-rect' style="font-size: 18px"></i></a>
+    						<a href="#"><i class='icon-facebook-squared'></i></a>
+    						<a href="#"><i class='icon-twitter-squared'></i></a>
+    						<a href="#"><i class='icon-odnoklassniki-square'></i></a>
+    					</li>
+    					<li>	
+    						Работа salam.by
+    					</li>
+    					<li>	
+    						<span>+375(29) 668 21 15</span>
+    					</li>
+    				</ul>
+                </div>
+    			</div>
+            </div>
+		</div>
+		<div class="footer-bottom">
+			<div class="iner-wrap">
+				<div style="padding-top:10px;">Rabota.salam.by 2017, ООО  &laquoАпроАвтоТех&raquo</div>
+				<div style="padding-bottom:10px;">УНП 77788999 Свидетельство о государственной регистрации выдано Мингорисполкомом решением от 11.08.2003 № 856</div>
+			</div>
+		</div>
+	</footer>
+       <style>
+        #mainNav 
+{
+	width: 100%;
+	/*border-top:solid 5px rgb(40,157,204);
+	background-color: rgb(35,35,35);*/
+    display: block;
+    height: 50px;
+}
+    .mainNavfixed {
+        position: fixed;
+        top: 0;
+        z-index: 101;
+    }
+        </style>
+    <script>
+(function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
+var a = document.querySelector('#mainNav'), b = null;  // селектор блока, который нужно закрепить
+window.addEventListener('scroll', Ascroll, false);
+document.body.addEventListener('scroll', Ascroll, false);  // если у html и body высота равна 100%
+function Ascroll() {
+  if (b == null) {  // добавить потомка-обёртку, чтобы убрать зависимость с соседями
+    var Sa = getComputedStyle(a, ''), s = '';
+    for (var i = 0; i < Sa.length; i++) {  // перечислить стили CSS, которые нужно скопировать с родителя
+      if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+        s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+      }
+    }
+    b = document.createElement('div');  // создать потомка
+    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+    a.insertBefore(b, a.firstChild);  // поместить потомка в цепляющийся блок первым
+    var l = a.childNodes.length;
+    for (var i = 1; i < l; i++) {  // переместить во вновь созданного потомка всех остальных потомков (итого: создан потомок-обёртка, внутри которого по прежнему работают скрипты)
+      b.appendChild(a.childNodes[1]);
+    }
+    //a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
+    a.style.padding = '0';
+    a.style.border = '0';  // если элементу присвоен padding или border
+  }
+  if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
+    b.className = 'mainNavfixed';
+  } else {
+    b.className = '';
+  }
+  window.addEventListener('resize', function() {
+    a.children[0].style.width = getComputedStyle(a, '').width
+  }, false);  // если изменить размер окна браузера, измениться ширина элемента
+}
+})()
+</script>
+</body>
+</html>
