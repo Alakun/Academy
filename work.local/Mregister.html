@@ -13,11 +13,10 @@
     <link href="css/fontello-ie7.css" rel="stylesheet" type="text/css" />
     <link href="css/fontello-ie7-codes.css" rel="stylesheet" type="text/css" />
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link type="text/css" href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <style>
 
 
@@ -321,82 +320,82 @@
             </div>
         </div>
     </header>
-<div class="inner-wrap">
-    <div class="firw">
-        <h1 id="mw">Регистрация соискателя</h1>
-        <p>Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи, которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать
-            <p>
-    </div>
-
-    <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
-        <p id="tlt">Персональная информация</p>
-
-
-        <div class="mname">
-
-
-            <div class="onei">
-                <label class='lable-form'>E-mail<span class="red-star" id='valid'> *</span></label>
-                <input id="emailval" type="email" name="email" required>
-            </div>
-
-            <div class="pas">
-                <div class="onei" id="secr">
-                    <label class='lable-form'>Пароль<span class="red-star"> *</span></label>
-                    <input type="password" name="password" id='pas1' required>
-                </div>
-
-                <div class="onei" id="secr">
-                    <label class='lable-form'>Повторить пароль<span class="red-star"> *</span></label>
-                    <input type="password" name="password" id='pas2' required>
-                </div>
-            </div>
-
-            <div>
-                <div class="onei" id="name">
-                    <label class='lable-form'>Фамилия<span class="red-star"> *</span></label>
-
-                    <input type="text" name="name" required>
-                </div>
-                <div class="onei" id="name">
-                    <label class='lable-form'>Имя<span class="red-star"> *</span></label>
-                    <input type="text" name="last_name" required>
-                </div>
-                <div class="onei" id="name">
-                    <label class='lable-form'>Отчество</label>
-                    <input type="text" name="second_name" required="off">
-                </div>
-            </div>
-
+    <div class="inner-wrap">
+        <div class="firw">
+            <h1 id="mw">Регистрация соискателя</h1>
+            <p>Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи, которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать
+                <p>
         </div>
 
+        <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
+            <p id="tlt">Персональная информация</p>
 
-        <div class="telly">
-            <p id="tlt">Контакты</p>
-            <p>Укажите все контакты, по которым работодатели смогут связаться с вами. Контакты, не отмеченные галочкой «Показывать в резюме», станут доступны работодателю только после принятия отклика или предложения работы на портале.</p>
-            <p id="secondary">Основной номер телефона<span id="applicant-register-primary-contact" class="help-icon" data-original-title="" title=""></span></p>
-            <div class="onei">
-                <label class='lable-form'>Телефон<span class="red-star"> *</span></label>
-                <input type="tel" id="telv" name="telephone" pattern="^\d{4}-\d{3}-\d{4}$" required>
-                <input id="it" type="checkbox" name="viewtel" type>
-                <p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
-                <label class="hiddencheck" id="telz">Введен некорректный номер</label>
 
-                <div style="margin-top:15px;">
-                    <input id="it" type="checkbox" style="margin:0;" name="ifsend">
-                    <p id="imp" style="display:inline-block;margin:0;margin-left:5px;">Отправлять SMS-уведомления об откликах</p>
-                    <p id="msgbl">На вышеуказанный номер будет выслано SMS с кодом подтверждения, который нужно ввести на странице вашего профиля</p>
+            <div class="mname">
+
+
+                <div class="onei">
+                    <label class='lable-form'>E-mail<span class="red-star" id='valid'> *</span></label>
+                    <input id="emailval" type="email" name="email" required>
+                </div>
+
+                <div class="pas">
+                    <div class="onei" id="secr">
+                        <label class='lable-form'>Пароль<span class="red-star"> *</span></label>
+                        <input type="password" name="password" id='pas1' required>
+                    </div>
+
+                    <div class="onei" id="secr">
+                        <label class='lable-form'>Повторить пароль<span class="red-star"> *</span></label>
+                        <input type="password" name="password" id='pas2' required>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="onei" id="name">
+                        <label class='lable-form'>Фамилия<span class="red-star"> *</span></label>
+
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="onei" id="name">
+                        <label class='lable-form'>Имя<span class="red-star"> *</span></label>
+                        <input type="text" name="last_name" required>
+                    </div>
+                    <div class="onei" id="name">
+                        <label class='lable-form'>Отчество</label>
+                        <input type="text" name="second_name" required="off">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="telly">
+                <p id="tlt">Контакты</p>
+                <p>Укажите все контакты, по которым работодатели смогут связаться с вами. Контакты, не отмеченные галочкой «Показывать в резюме», станут доступны работодателю только после принятия отклика или предложения работы на портале.</p>
+                <p id="secondary">Основной номер телефона<span id="applicant-register-primary-contact" class="help-icon" data-original-title="" title=""></span></p>
+                <div class="onei">
+                    <label class='lable-form'>Телефон<span class="red-star"> *</span></label>
+                    <input type="tel" id="telv" name="telephone" pattern="^\d{4}-\d{3}-\d{4}$" required>
+                    <input id="it" type="checkbox" name="viewtel" type>
+                    <p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
+                    <label class="hiddencheck" id="telz">Введен некорректный номер</label>
+
+                    <div style="margin-top:15px;">
+                        <input id="it" type="checkbox" style="margin:0;" name="ifsend">
+                        <p id="imp" style="display:inline-block;margin:0;margin-left:5px;">Отправлять SMS-уведомления об откликах</p>
+                        <p id="msgbl">На вышеуказанный номер будет выслано SMS с кодом подтверждения, который нужно ввести на странице вашего профиля</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <p id="secondary" class="now" style="margin-top: 12px;">Другие способы связи</p>
-        <div class="aaa">
-            <div class="ochoices">
-                <div class="choices">
-                    <div class="item" style="width:10px;">
-                        <p id="secondary" style="margin-left:20px;">Тип</p>
-                        <select id="choose">
+            <p id="secondary" class="now" style="margin-top: 12px;">Другие способы связи</p>
+            <div class="aaa">
+                <div class="ochoices">
+                    <div class="choices">
+                        <div class="item" style="width:10px;">
+                            <p id="secondary" style="margin-left:20px;">Тип</p>
+                            <select id="choose">
 <option>Telephone</option>
 <option>E-mail</option>
 <option>Skype</option>
@@ -404,32 +403,32 @@
 <option>Jabber/GTalk</option>
 <option>Mail.ru Агент</option>
 </select>
+                        </div>
+
+                        <div class="item">
+                            <p id="secondary">Значение</p>
+                            <input class="chin" type="text">
+                            <input id="it" type="checkbox" name="viewtel">
+                            <p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
+
+                        </div>
+
+
                     </div>
-
-                    <div class="item">
-                        <p id="secondary">Значение</p>
-                        <input class="chin" type="text">
-                        <input id="it" type="checkbox" name="viewtel">
-                        <p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
-
-                    </div>
-
 
                 </div>
-
+                <div id="mixr" style="display:inline-block;">
+                    <i style="display:inline-block;" class="fa fa-trash"></i>
+                    <p onclick="dele()" style="display:inline-block;" id="del">Удалить</p>
+                </div>
             </div>
-            <div id="mixr" style="display:inline-block;">
-                <i style="display:inline-block;" class="fa fa-trash"></i>
-                <p onclick="dele()" style="display:inline-block;" id="del">Удалить</p>
+            <div class="joinadd" id="mixr">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <p onclick="clickadd()" style="display:inline-block;" id="create" id="del">Добавить</p>
             </div>
-        </div>
-        <div class="joinadd" id="mixr">
-            <i class="fa fa-plus" aria-hidden="true"></i>
-            <p onclick="clickadd()" style="display:inline-block;" id="create" id="del">Добавить</p>
-        </div>
 
-        <input type="submit" style="margin-top" 50px; class="btn-style " value="Зарегистрироваться " />
-    </form>
+            <input type="submit" style="margin-top" 50px; class="btn-style " value="Зарегистрироваться " />
+        </form>
     </div>
 
     <footer class='text-foot'>
@@ -507,62 +506,8 @@
             </div>
         </div>
     </footer>
-    <style>
-        #mainNav {
-            width: 100%;
-            /*border-top:solid 5px rgb(40,157,204);*/
-            /*background-color: rgb(35,35,35);*/
-            display: block;
-            height: 50px;
-        }
-        
-        .mainNavfixed {
-            position: fixed;
-            top: 0;
-            z-index: 101;
-        }
 
-    </style>
-    <script>
-        //Меню
-           (function() { // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
-            var a = document.querySelector('#mainNav'),
-                b = null; // селектор блока, который нужно закрепить
-            window.addEventListener('scroll', Ascroll, false);
-            document.body.addEventListener('scroll', Ascroll, false); // если у html и body высота равна 100%
-            function Ascroll() {
-                if (b == null) { // добавить потомка-обёртку, чтобы убрать зависимость с соседями
-                    var Sa = getComputedStyle(a, ''),
-                        s = '';
-                    for (var i = 0; i < Sa.length; i++) { // перечислить стили CSS, которые нужно скопировать с родителя
-                        if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-                            s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
-                        }
-                    }
-                    b = document.createElement('div'); // создать потомка
-                    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-                    a.insertBefore(b, a.firstChild); // поместить потомка в цепляющийся блок первым
-                    var l = a.childNodes.length;
-                    for (var i = 1; i < l; i++) { // переместить во вновь созданного потомка всех остальных потомков (итого: создан потомок-обёртка, внутри которого по прежнему работают скрипты)
-                        b.appendChild(a.childNodes[1]);
-                    }
-                    //a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
-                    a.style.padding = '0';
-                    a.style.border = '0'; // если элементу присвоен padding или border
-                }
-                if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
-                    b.className = 'mainNavfixed';
-                } else {
-                    b.className = '';
-                }
-                window.addEventListener('resize', function() {
-                    a.children[0].style.width = getComputedStyle(a, '').width
-                }, false); // если изменить размер окна браузера, измениться ширина элемента
-            }
-        })()
-
-    </script>
-
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 <!--position: relative; float: left;-->
 

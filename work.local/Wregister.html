@@ -13,11 +13,10 @@
     <link href="css/fontello-ie7.css" rel="stylesheet" type="text/css" />
     <link href="css/fontello-ie7-codes.css" rel="stylesheet" type="text/css" />
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link type="text/css" href="style.css" rel="stylesheet" />
-    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </head>
 
@@ -327,23 +326,23 @@
         </div>
         <div>
             <p id="tlt">Тип организации<span class="red-star" id='valid'> *</span></p>
-            
-            <input name="radio1" type="radio" checked="checked" value="organization" id="radio1" class="ui-checkboxradio ui-helper-hidden-accessible">		
-				
-				<label for="radio1">
+
+            <input name="radio1" type="radio" checked="checked" value="organization" id="radio1" class="ui-checkboxradio ui-helper-hidden-accessible">
+
+            <label for="radio1">
 					<span class="text">Юридическое лицо</span>
 				</label>
-           
-            <input name="radio1" type="radio" value="organization" id="radio2" class="ui-checkboxradio ui-helper-hidden-accessible">		
-				
-				<label for="radio2" class="">
+
+            <input name="radio1" type="radio" value="organization" id="radio2" class="ui-checkboxradio ui-helper-hidden-accessible">
+
+            <label for="radio2" class="">
 					<span class="text">Индивидуальный предприниматель</span>
 				</label>
-            
+
         </div>
-   
-			
-	
+
+
+
         <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
             <p id="tlt">Персональная информация</p>
 
@@ -548,62 +547,7 @@
             </div>
         </div>
     </footer>
-    <style>
-        #mainNav {
-            width: 100%;
-            /*border-top:solid 5px rgb(40,157,204);*/
-            /*background-color: rgb(35,35,35);*/
-            display: block;
-            height: 50px;
-        }
-        
-        .mainNavfixed {
-            position: fixed;
-            top: 0;
-            z-index: 101;
-        }
-
-    </style>
-
-      <script>
-          //Меню
-           (function() { // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
-            var a = document.querySelector('#mainNav'),
-                b = null; // селектор блока, который нужно закрепить
-            window.addEventListener('scroll', Ascroll, false);
-            document.body.addEventListener('scroll', Ascroll, false); // если у html и body высота равна 100%
-            function Ascroll() {
-                if (b == null) { // добавить потомка-обёртку, чтобы убрать зависимость с соседями
-                    var Sa = getComputedStyle(a, ''),
-                        s = '';
-                    for (var i = 0; i < Sa.length; i++) { // перечислить стили CSS, которые нужно скопировать с родителя
-                        if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-                            s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
-                        }
-                    }
-                    b = document.createElement('div'); // создать потомка
-                    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-                    a.insertBefore(b, a.firstChild); // поместить потомка в цепляющийся блок первым
-                    var l = a.childNodes.length;
-                    for (var i = 1; i < l; i++) { // переместить во вновь созданного потомка всех остальных потомков (итого: создан потомок-обёртка, внутри которого по прежнему работают скрипты)
-                        b.appendChild(a.childNodes[1]);
-                    }
-                    //a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
-                    a.style.padding = '0';
-                    a.style.border = '0'; // если элементу присвоен padding или border
-                }
-                if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
-                    b.className = 'mainNavfixed';
-                } else {
-                    b.className = '';
-                }
-                window.addEventListener('resize', function() {
-                    a.children[0].style.width = getComputedStyle(a, '').width
-                }, false); // если изменить размер окна браузера, измениться ширина элемента
-            }
-        })()
-
-    </script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

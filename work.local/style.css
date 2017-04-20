@@ -7,21 +7,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#mainNav {
-    width: 100%;
-    border-top: solid 5px rgb(179, 0, 151);
-    background-color: rgb(35, 35, 35);
-    display: block;
-    margin-top: 1px;
-    height: 50px;
-}
-
-.mainNav_fixed {
-    position: fixed;
-    top: 0;
-    z-index: 101;
-}
-
 .menu {
     display: block;
     margin: 0;
@@ -410,7 +395,7 @@ ul.menu_unvis>li:hover>ul.submenu_unvis {
 }
 
 .findjob {
-    background: url("img/bg-galaxy.jpg");
+    background-image: url("img/bg-galaxy.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -485,7 +470,6 @@ input {
     transition-duration: 0.4s;
 }
 
-
 .hd {
     font: 1.4em Arial Black;
     color: white;
@@ -503,7 +487,6 @@ input {
     text-shadow: 0px 0px 3px #000;
     font-family: 'Open Sans', sans-serif;
 }
-
 
 .get_vak {
     display: inline-block;
@@ -1648,7 +1631,6 @@ button {
     .ban2 {
         float: right;
     }
-
 }
 
 @media all and (max-width: 1080px) {
@@ -1698,7 +1680,6 @@ button {
         margin-bottom: 25px;
         margin-top: 25px;
     }
-
     .param_unvis {
         display: none;
     }
@@ -2206,7 +2187,7 @@ p {
 
 .checkbox {
     display: inline-block;
-    width:100px;
+    width: 100px;
     height: 20px;
     border-radius: 3px;
     padding-left: 2px;
@@ -2215,5 +2196,19 @@ p {
 }
 
 label .text {
-    border-bottom: 1px dotted;    
+    border-bottom: 1px dotted;
+}
+
+#mainNav {
+    width: 100%;
+    /*border-top:solid 5px rgb(40,157,204);*/
+    /*background-color: rgb(35,35,35);*/
+    display: block;
+    height: 50px;
+}
+
+.mainNavfixed {
+    position: fixed;
+    top: 0;
+    z-index: 101;
 }
