@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width">
-    <title>Регистрация соискателя</title>
+    <title>Регистрация работодателя</title>
 
     <link href="css/animation.css" rel="stylesheet" type="text/css" />
     <link href="css/fontello.css" rel="stylesheet" type="text/css" />
@@ -18,10 +18,7 @@
     <link type="text/css" href="style.css" rel="stylesheet" />
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <style>
 
-
-    </style>
 </head>
 
 <body>
@@ -98,7 +95,7 @@
                                                             <dd id="web-forms__collection_dd_js-advanced-checkbox-58b687df2a428__item">
                                                                 <label class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-check ui-state-checked ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span><div class="advanced-checkbox"><input name="login-form[remember]" type="checkbox" checked="checked" value="1" id="js-advanced-checkbox-58b687df2a428" class="ui-checkboxradio ui-helper-hidden-accessible"></div> запомнить меня <span id="praca-login-help-remember" class="help-icon" data-original-title="" title=""></span></label> </dd>
                                                             <dd>
-                                                                <input name="login-form[referrer]" type="hidden" value=""> </dd>
+                                                                <input name="login-form[referrer]" type="hidden" value="https://praca.by/"> </dd>
                                                             <dd>
                                                                 <input type="submit" value="Войти" data-loading-text="Вход..." class="btn btn_green"><a class="forget-password" href="#" tabindex="-1">Забыли пароль?</a> </dd>
                                                         </dl>
@@ -214,7 +211,7 @@
 
 
 
-                    <div id='' class="clearfix">
+                    <div class="clearfix">
                         <span style="float: right;">
                                 <i class='icon-dollar'></i>
                                 Выбор валюты
@@ -240,7 +237,7 @@
             <div class="iner-wrap clearfix">
                 <ul class=menu>
                     <li style="background-color:#b30097;">
-                        <a href="#" class="icon-home" style="padding-left: 1px; padding-right: 1px;">
+                        <a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
                         </a>
                     </li>
                     <li>
@@ -287,7 +284,7 @@
                 </ul>
                 <ul class="menu_unvis">
                     <li style="background-color:#b30097;">
-                        <a href="#" class="icon-home" style="padding-left: 1px; padding-right: 1px;">
+                        <a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
                         </a>
                     </li>
                     <li>
@@ -321,82 +318,126 @@
             </div>
         </div>
     </header>
-<div class="inner-wrap">
-    <div class="firw">
-        <h1 id="mw">Регистрация соискателя</h1>
-        <p>Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи, которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать
-            <p>
-    </div>
+    <div class='inner-wrap'>
 
-    <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
-        <p id="tlt">Персональная информация</p>
-
-
-        <div class="mname">
-
-
-            <div class="onei">
-                <label class='lable-form'>E-mail<span class="red-star" id='valid'> *</span></label>
-                <input id="emailval" type="email" name="email" required>
-            </div>
-
-            <div class="pas">
-                <div class="onei" id="secr">
-                    <label class='lable-form'>Пароль<span class="red-star"> *</span></label>
-                    <input type="password" name="password" id='pas1' required>
-                </div>
-
-                <div class="onei" id="secr">
-                    <label class='lable-form'>Повторить пароль<span class="red-star"> *</span></label>
-                    <input type="password" name="password" id='pas2' required>
-                </div>
-            </div>
-
-            <div>
-                <div class="onei" id="name">
-                    <label class='lable-form'>Фамилия<span class="red-star"> *</span></label>
-
-                    <input type="text" name="name" required>
-                </div>
-                <div class="onei" id="name">
-                    <label class='lable-form'>Имя<span class="red-star"> *</span></label>
-                    <input type="text" name="last_name" required>
-                </div>
-                <div class="onei" id="name">
-                    <label class='lable-form'>Отчество</label>
-                    <input type="text" name="second_name" required="off">
-                </div>
-            </div>
-
+        <div class="firw">
+            <h1 id="mw">Регистрация работодателя</h1>
+            <p>Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи, которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать.
+                <p>
         </div>
+        <div>
+            <p id="tlt">Тип организации<span class="red-star" id='valid'> *</span></p>
+            
+            <input name="radio1" type="radio" checked="checked" value="organization" id="radio1" class="ui-checkboxradio ui-helper-hidden-accessible">		
+				
+				<label for="radio1">
+					<span class="text">Юридическое лицо</span>
+				</label>
+           
+            <input name="radio1" type="radio" value="organization" id="radio2" class="ui-checkboxradio ui-helper-hidden-accessible">		
+				
+				<label for="radio2" class="">
+					<span class="text">Индивидуальный предприниматель</span>
+				</label>
+            
+        </div>
+   
+			
+	
+        <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
+            <p id="tlt">Персональная информация</p>
 
 
-        <div class="telly">
-            <p id="tlt">Контакты</p>
-            <p>Укажите все контакты, по которым работодатели смогут связаться с вами. Контакты, не отмеченные галочкой «Показывать в резюме», станут доступны работодателю только после принятия отклика или предложения работы на портале.</p>
-            <p id="secondary">Основной номер телефона<span id="applicant-register-primary-contact" class="help-icon" data-original-title="" title=""></span></p>
-            <div class="onei">
-                <label class='lable-form'>Телефон<span class="red-star"> *</span></label>
-                <input type="tel" id="telv" name="telephone" pattern="^\d{4}-\d{3}-\d{4}$" required>
-                <input id="it" type="checkbox" name="viewtel" type>
-                <p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
-                <label class="hiddencheck" id="telz">Введен некорректный номер</label>
+            <div class="mname">
 
-                <div style="margin-top:15px;">
-                    <input id="it" type="checkbox" style="margin:0;" name="ifsend">
-                    <p id="imp" style="display:inline-block;margin:0;margin-left:5px;">Отправлять SMS-уведомления об откликах</p>
-                    <p id="msgbl">На вышеуказанный номер будет выслано SMS с кодом подтверждения, который нужно ввести на странице вашего профиля</p>
+
+                <div class="onei">
+                    <label class='lable-form'>E-mail<span class="red-star" id='valid'> *</span></label>
+                    <input id="emailval" type="email" name="email" required>
+                </div>
+
+                <div class="pas">
+                    <div class="onei">
+                        <label class='lable-form'>Пароль<span class="red-star"> *</span></label>
+                        <input type="password" name="password" id='pas1' required>
+                    </div>
+
+                    <div class="onei">
+                        <label class='lable-form'>Повторить пароль<span class="red-star"> *</span></label>
+                        <input type="password" name="password" id='pas2' required>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="onei">
+                        <label class='lable-form'>Фамилия<span class="red-star"> *</span></label>
+
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="onei">
+                        <label class='lable-form'>Имя<span class="red-star"> *</span></label>
+                        <input type="text" name="last_name" required>
+                    </div>
+                    <div class="onei" id="name">
+                        <label class='lable-form1'>Отчество</label>
+                        <input type="text" name="second_name" required="off">
+                    </div>
+
+                </div>
+                <div class="onei">
+                    <label class='lable-form'>Должность<span class="red-star"> *</span></label>
+                    <input type="text" name="post" required>
+                </div>
+                <div>
+                    <p id="tlt" style='padding-top: 20px;'>Информация об организации</p>
+                    <div class="onei">
+                        <label class='lable-form'>Наименование<span class="red-star"> *</span></label>
+                        <input type="text" name="compname" required>
+                    </div>
+                    <div class="onei">
+                        <span><b> 	&laquo;</b> </span> <input type="text" name="post" required><span> <b>&raquo;</b> </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="onei">
+                        <label class='lable-form'>УНП<span class="red-star"> *</span></label>
+                        <input type="text" name="UNP" required>
+                    </div>
+                    <div class="onei">
+                        <label class='lable-form'>Город<span class="red-star"> *</span></label>
+                        <select id="chooscity" id="choose">
+		<option value="Минск"	>Минск</option>	<option value="Брест"	>Брест</option>	<option value="Витебск"	>Витебск</option>	<option value="Гродно"	>Гродно</option>	<option value="Гомель"	>Гомель</option>	<option value="Могилев"	>Могилев</option>	<option value="Барановичи"	>Барановичи</option>	<option value="Барань"	>Барань</option>	<option value="Белоозерск"	>Белоозерск</option>	<option value="Белыничи"	>Белыничи</option>	<option value="Береза"	>Береза</option>	<option value="Березино"	>Березино</option>	<option value="Березовка"	>Березовка</option>	<option value="Бешенковичи"	>Бешенковичи</option>	<option value="Бобруйск"	>Бобруйск</option>	<option value="Большая Берестовица"	>Большая Берестовица</option>	<option value="Борисов"	>Борисов</option>	<option value="Брагин"	>Брагин</option>	<option value="Браслав"	>Браслав</option>	<option value="Буда-Кошелево"	>Буда-Кошелево</option>	<option value="Быхов"	>Быхов</option>	<option value="Василевичи"	>Василевичи</option>	<option value="Верхнедвинск"	>Верхнедвинск</option>	<option value="Ветка"	>Ветка</option>	<option value="Вилейка"	>Вилейка</option>	<option value="Волковыск"	>Волковыск</option>	<option value="Воложин"	>Воложин</option>	<option value="Вороново"	>Вороново</option>	<option value="Высокое"	>Высокое</option>	<option value="Ганцевичи"	>Ганцевичи</option>	<option value="Глубокое"	>Глубокое</option>	<option value="Глуск"	>Глуск</option>	<option value="Горки"	>Горки</option>	<option value="Городок"	>Городок</option>	<option value="Давид-Городок"	>Давид-Городок</option>	<option value="Дзержинск"	>Дзержинск</option>	<option value="Дисна"	>Дисна</option>	<option value="Добруш"	>Добруш</option>	<option value="Докшицы"	>Докшицы</option>	<option value="Дрибин"	>Дрибин</option>	<option value="Дрогичин"	>Дрогичин</option>	<option value="Дубровно"	>Дубровно</option>	<option value="Дятлово"	>Дятлово</option>	<option value="Ельск"	>Ельск</option>	<option value="Жабинка"	>Жабинка</option>	<option value="Житковичи"	>Житковичи</option>	<option value="Жлобин"	>Жлобин</option>	<option value="Жодино"	>Жодино</option>	<option value="Заславль"	>Заславль</option>	<option value="Зельва"	>Зельва</option>	<option value="Иваново"	>Иваново</option>	<option value="Ивацевичи"	>Ивацевичи</option>	<option value="Ивье"	>Ивье</option>	<option value="Калинковичи"	>Калинковичи</option>	<option value="Каменец"	>Каменец</option>	<option value="Кировск"	>Кировск</option>	<option value="Клецк"	>Клецк</option>	<option value="Климовичи"	>Климовичи</option>	<option value="Кличев"	>Кличев</option>	<option value="Кобрин"	>Кобрин</option>	<option value="Копыль"	>Копыль</option>	<option value="Кореличи"	>Кореличи</option>	<option value="Корма"	>Корма</option>	<option value="Коссово"	>Коссово</option>	<option value="Костюковичи"	>Костюковичи</option>	<option value="Краснополье"	>Краснополье</option>	<option value="Кричев"	>Кричев</option>	<option value="Круглое"	>Круглое</option>	<option value="Крупки"	>Крупки</option>	<option value="Лельчицы"	>Лельчицы</option>	<option value="Лепель"	>Лепель</option>	<option value="Лида"	>Лида</option>	<option value="Лиозно"	>Лиозно</option>	<option value="Логойск"	>Логойск</option>	<option value="Лоев"	>Лоев</option>	<option value="Лунинец"	>Лунинец</option>	<option value="Любань"	>Любань</option>	<option value="Ляховичи"	>Ляховичи</option>	<option value="Малорита"	>Малорита</option>	<option value="Марьина Горка"	>Марьина Горка</option>	<option value="Микашевичи"	>Микашевичи</option>	<option value="Миоры"	>Миоры</option>	<option value="Мозырь"	>Мозырь</option>	<option value="Молодечно"	>Молодечно</option>	<option value="Мосты"	>Мосты</option>	<option value="Мстиславль"	>Мстиславль</option>	<option value="Мядель"	>Мядель</option>	<option value="Наровля"	>Наровля</option>	<option value="Несвиж"	>Несвиж</option>	<option value="Новогрудок"	>Новогрудок</option>	<option value="Новолукомль"	>Новолукомль</option>	<option value="Новополоцк"	>Новополоцк</option>	<option value="Октябрьский"	>Октябрьский</option>	<option value="Орша"	>Орша</option>	<option value="Осиповичи"	>Осиповичи</option>	<option value="Островец"	>Островец</option>	<option value="Ошмяны"	>Ошмяны</option>	<option value="Петриков"	>Петриков</option>	<option value="Пинск"	>Пинск</option>	<option value="Полоцк"	>Полоцк</option>	<option value="Поставы"	>Поставы</option>	<option value="Пружаны"	>Пружаны</option>	<option value="Речица"	>Речица</option>	<option value="Рогачев"	>Рогачев</option>	<option value="Россоны"	>Россоны</option>	<option value="Ружаны"	>Ружаны</option>	<option value="Светлогорск"	>Светлогорск</option>	<option value="Свислочь"	>Свислочь</option>	<option value="Сенно"	>Сенно</option>	<option value="Скидель"	>Скидель</option>	<option value="Славгород"	>Славгород</option>	<option value="Слоним"	>Слоним</option>	<option value="Слуцк"	>Слуцк</option>	<option value="Смолевичи"	>Смолевичи</option>	<option value="Сморгонь"	>Сморгонь</option>	<option value="Солигорск"	>Солигорск</option>	<option value="Старые Дороги"	>Старые Дороги</option>	<option value="Столбцы"	>Столбцы</option>	<option value="Столин"	>Столин</option>	<option value="Толочин"	>Толочин</option>	<option value="Туров"	>Туров</option>	<option value="Узда"	>Узда</option>	<option value="Ушачи"	>Ушачи</option>	<option value="Фаниполь"	>Фаниполь</option>	<option value="Хойники"	>Хойники</option>	<option value="Хотимск"	>Хотимск</option>	<option value="Чаусы"	>Чаусы</option>	<option value="Чашники"	>Чашники</option>	<option value="Червень"	>Червень</option>	<option value="Чериков"	>Чериков</option>	<option value="Чечерск"	>Чечерск</option>	<option value="Шарковщина"	>Шарковщина</option>	<option value="Шклов"	>Шклов</option>	<option value="Шумилино"	>Шумилино</option>	<option value="Щучин"	>Щучин</option></select>
+                    </div>
+                </div>
+                <div>
+                    <div class="onei">
+                        <label class='lable-form'>Юридический адрес (местонахождение)<span class="red-star"> *</span></label>
+                        <input type="text" name="UNP" required>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <p id="secondary" class="now" style="margin-top: 12px;">Другие способы связи</p>
-        <div class="aaa">
-            <div class="ochoices">
-                <div class="choices">
-                    <div class="item" style="width:10px;">
-                        <p id="secondary" style="margin-left:20px;">Тип</p>
-                        <select id="choose">
+
+            <div class="telly">
+                <p id="tlt">Контакты</p>
+                <p>Обратите внимание, что все номера телефонов проходят проверку: ваши вакансии не будут видны пользователям сайта, пока у организации не будет хотя бы одного проверенного номера телефона.</p>
+                <p id="secondary">Основной номер телефона<span id="applicant-register-primary-contact" class="help-icon" data-original-title="" title=""></span></p>
+                <div class="onei">
+                    <label class='lable-form'>Телефон<span class="red-star"> *</span></label>
+                    <input type="tel" id="telv" name="telephone" pattern="^\d{4}-\d{3}-\d{4}$" required>
+                    <input id="it" type="checkbox" name="viewtel" type>
+                    <p id="imp" style="display:inline-block;margin:0;">Показывать на странице организации</p>
+                    <label class="hiddencheck" id="telz">Введен некорректный номер</label>
+                </div>
+            </div>
+            <p>При необходимости этот номер может быть использован менеджерами портала @БЛАБЛА@ для связи с вашей организацией</p>
+            <p id="secondary" class="now" style="margin-top: 12px;">Другие способы связи</p>
+            <div class="aaa">
+                <div class="ochoices">
+                    <div class="choices">
+                        <div class="item" style="width:10px;">
+                            <p id="secondary" style="margin-left:20px;">Тип</p>
+                            <select id="choose">
 <option>Telephone</option>
 <option>E-mail</option>
 <option>Skype</option>
@@ -404,32 +445,32 @@
 <option>Jabber/GTalk</option>
 <option>Mail.ru Агент</option>
 </select>
+                        </div>
+
+                        <div class="item">
+                            <p id="secondary">Значение</p>
+                            <input class="chin" type="text">
+                            <input id="it" type="checkbox" name="viewtel">
+                            <p id="imp" style="display:inline-block;margin:0;">Показывать на странице организации</p>
+
+                        </div>
+
+
                     </div>
-
-                    <div class="item">
-                        <p id="secondary">Значение</p>
-                        <input class="chin" type="text">
-                        <input id="it" type="checkbox" name="viewtel">
-                        <p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
-
-                    </div>
-
 
                 </div>
-
+                <div id="mixr" style="display:inline-block;">
+                    <i style="display:inline-block;" class="fa fa-trash"></i>
+                    <p onclick="dele()" style="display:inline-block;" id="del">Удалить</p>
+                </div>
             </div>
-            <div id="mixr" style="display:inline-block;">
-                <i style="display:inline-block;" class="fa fa-trash"></i>
-                <p onclick="dele()" style="display:inline-block;" id="del">Удалить</p>
+            <div class="joinadd" id="mixr">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <p onclick="clickadd()" style="display:inline-block;" id="create" id="del">Добавить</p>
             </div>
-        </div>
-        <div class="joinadd" id="mixr">
-            <i class="fa fa-plus" aria-hidden="true"></i>
-            <p onclick="clickadd()" style="display:inline-block;" id="create" id="del">Добавить</p>
-        </div>
 
-        <input type="submit" style="margin-top" 50px; class="btn-style " value="Зарегистрироваться " />
-    </form>
+            <input type="submit" style="margin-top" 50px; class="btn-style " value="Зарегистрироваться " />
+        </form>
     </div>
 
     <footer class='text-foot'>
@@ -523,8 +564,9 @@
         }
 
     </style>
-    <script>
-        //Меню
+
+      <script>
+          //Меню
            (function() { // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
             var a = document.querySelector('#mainNav'),
                 b = null; // селектор блока, который нужно закрепить
@@ -562,8 +604,6 @@
         })()
 
     </script>
-
 </body>
-<!--position: relative; float: left;-->
 
 </html>
