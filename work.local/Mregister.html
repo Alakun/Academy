@@ -1,299 +1,108 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+
 <head>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<meta name="viewport" content="width=device-width">
-  <link href="css/animation.css" rel="stylesheet" type="text/css" /> 
-        <link href="css/fontello.css" rel="stylesheet" type="text/css" />
-	<link href="css/fontello-codes.css" rel="stylesheet" type="text/css" />
-	<link href="css/fontello-embedded.css" rel="stylesheet" type="text/css" />  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕРёСЃРєР°С‚РµР»СЏ</title>
 
-        <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
-<title>
-Регистрация соискателя
-</title>
-<style>
-body{
-font-family:'Open Sans',sans-serif;
-margin:0;
-padding:0;
-}
-p{font-size:14px;}
-.head-bot{
-width:100%;
-}
-#mw{
-font-family: 'Open Sans', sans-serif;
-font-size:34px;
-font-weight:400;
-margin-top:6%;
-}
-.firw{
-width:90%;
-height:100%;
-margin-left:40px;
-}
-#tlt{
-font-weight:700;
-font-size:18px;
-}
-.inputs{
-padding-left:40px;
-
-}
-.onei{
-margin-top:2%;
-margin-left:10px;
-}
-.onei label:not(.hiddencheck){
-  display:block;
-  font-family:'Open Sans';
-  font-weight:500;
-  font-size:14px;
-  
-}
-.onei input:not(#it){
-  color:#212121;
-  font-size:18px;
-  width:271px;
-  height:28px;
-  border-radius:3px;
-  outline:none;
-  margin-top:1%;
-  padding-left:10px;
-  border:1.5px solid #d7d7d7;
-}
-#name{
-display:inline-block;
-}
-.mname{margin:0 auto;}
+    <link href="css/animation.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontello.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontello-codes.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontello-embedded.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontello-ie7.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontello-ie7-codes.css" rel="stylesheet" type="text/css" />
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
 
 
-#choose{
-width:150px;
-font-size:18px;
-outline:none;
-border-radius:4px;
-border:1px solid #d7d7d7;
-padding:1%;
-margin-right:0;
-height:33px;
-margin-left:20px;
-}
-.chin{
-display:inline-block;
-width:150px;
-height:30px;
-border:1px solid #d7d7d7;
-outline:none;
-padding-left:2%;
-font-size:18px;
--webkit-transition:all 0.5s;
--webkit-transition: all 0.5s;
-font-width:100;
-border-radius:4px;
-}
-
-.regular-checkbox {
-	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	padding: 9px;
-	border-radius: 3px;
-	display: inline-block;
-	position: relative;
-        outline:none;
-
-}
-.regular-checkbox:active, .regular-checkbox:checked:active {
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-
-.regular-checkbox:checked {
-	background-color: #e9ecee;
-	border: 1px solid #adb8c0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #99a1a7;
-}
-.regular-checkbox:checked:after {
-	content: '\2714';
-	font-size: 14px;
-	position: absolute;
-	top: 0px;
-	left: 3px;
-	color: #99a1a7;
-}
-.btn-style{
-border:none;
-border-radius:6px;
-font-size:20px;
-padding:10px 20px;
-background:#6f5499;
-color:#fff;
-width:35%;
-transition:border 0.5s;
-outline:0;
-display:block;
-margin:0 auto;
-margin-bottom:4%;
-}
-#secr{display:inline-block;}
-.btn-style:hover{cursor:pointer;}
-.end{
--webkit-box-shadow: inset 0px 5px 15px 0px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 5px 15px 0px rgba(0,0,0,0.75);
-box-shadow: inset 0px 5px 15px 0px rgba(0,0,0,0.75);
-width:100%;
-height:40px;
-background:#FAA691;
-margin-top:40px;
-}
-.hiddencheck{
-display:none;
-color:red;
-position:absolute;
-font-size:12px;
-}
-.telly{width:90%;}
-#secondary{
-color:#212121;
-font-size:14px;
-font-weight:900;
-margin-bottom:13px;
-}
-#it{
-vertical-align:middle;
--ms-transform: scale(1.3); 
-  -moz-transform: scale(1.3); 
-  -webkit-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  padding: 5px;
-margin-left:15px;
-}
-#imp{
-font-weight:400;
-}
-#msgbl{
-color:#7c7c7c;
-font-size:12px;
-margin:0;
-}
-.choices{
-width:650px;
-background:#f7f7f7;
-display:flex;
-flex-direction:row;
-flex-wrap:wrap;
-padding:30px;
-padding-top:20px;
-}
-.ochoices{
-margin-left:10px;
-background:#fff;
-display:inline-block;
-width:720px;
-}
-.item{
-flex-grow:1;
-width:40%;
-height:100%;
-
-}
-
-#mixr{
-color:blue;
-
-}
-#mixr p{margin-left:5px;}
-#mixr p:hover{text-decoration:underline;cursor:pointer;}
-.joinadd{margin-left:10px;}
-</style>
+    </style>
 </head>
+
 <body>
+    <header>
+        <div class='head-top'>
+            <div class='iner-wrap'>
+                <div id='date'>
+                    <script language="javascript" type="text/javascript">
+                        <!--
+                        var d = new Date();
 
+                        var day = new Array("Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ", "РџРѕРЅРµРґРµР»СЊРЅРёРє", "Р’С‚РѕСЂРЅРёРє",
+                            "РЎСЂРµРґР°", "Р§РµС‚РІРµСЂРі", "РџСЏС‚РЅРёС†Р°", "РЎСѓР±Р±РѕС‚Р°");
 
-<header>
-			<div class='head-top'>
-				<div class='iner-wrap'>
-					<div id='date'>	
-						<script language="javascript" type="text/javascript"><!--
-							var d = new Date();
+                        var month = new Array("СЏРЅРІР°СЂСЏ", "С„РµРІСЂР°Р»СЏ", "РјР°СЂС‚Р°", "Р°РїСЂРµР»СЏ", "РјР°СЏ", "РёСЋРЅСЏ",
+                            "РёСЋР»СЏ", "Р°РІРіСѓСЃС‚Р°", "СЃРµРЅС‚СЏР±СЂСЏ", "РѕРєС‚СЏР±СЂСЏ", "РЅРѕСЏР±СЂСЏ", "РґРµРєР°Р±СЂСЏ");
 
-							var day=new Array("Воскресенье","Понедельник","Вторник",
-							"Среда","Четверг","Пятница","Суббота");
+                        document.write(day[d.getDay()] + " " + d.getDate() + " " + month[d.getMonth()] +
+                            " " + d.getFullYear() + " Рі.");
+                        //-->
 
-							var month=new Array("января","февраля","марта","апреля","мая","июня",
-							"июля","августа","сентября","октября","ноября","декабря");
-
-							document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()]
-							+ " " + d.getFullYear() + " г.");
-							//--></script>
-					</div>
-					<img src="">
-					<div id="social-links">
-						<a href="#">
-							<i class="icon-facebook"></i>
-						</a>
-						<a href="#">
-							<i class="icon-twitter"></i>
-						</a>
-						<a href="#">
-							<i class="icon-youtube"></i>
-						</a>
-						<a href="#">
-							<i class="icon-vkontakte"></i>
-						</a>
-						<a href="#">
-							<i class="icon-odnoklassniki"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class='clearfix iner-wrap'>
-				<div class=" head-bot clearfix">
-					<div class="head-inner">
-						<a href='#'><img src="img/logo.png"></a>
-					</div>
-                    <div class='top-right'>
-                        <div id='logintop' class="head-inner">
-                            <i class='icon-users'></i>
-                            <button style="background: none; border: none; outline: 0; color:#5d4484; line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Вход</button>
-                            <span style="margin-left: 5px;margin-right: 5px;">|</span>
-                            <button style="background: none; border: none; outline: 0;color: #5d4484;line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Регистрация</button>
-                            <div id="myModal" class="modal fade">
+                    </script>
+                </div>
+                <img src="">
+                <div id="social-links">
+                    <a href="#">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-youtube"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-vkontakte"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-odnoklassniki"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class='clearfix iner-wrap'>
+            <div class=" head-bot clearfix">
+                <div class="head-inner">
+                    <a href='#'><img src="img/logo.png"></a>
+                </div>
+                <div class='top-right'>
+                    <div id='logintop' class="head-inner">
+                        <i class='icon-users'></i>
+                        <button style="background: none; border: none; outline: 0; color:#5d4484; line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Р’С…РѕРґ</button>
+                        <span style="margin-left: 5px;margin-right: 5px;">|</span>
+                        <button style="background: none; border: none; outline: 0;color: #5d4484;line-height: 45px;font-size: 1.4em;" data-toggle="modal" data-target="#myModal">Р РµРіРёСЃС‚СЂР°С†РёСЏ</button>
+                        <div id="myModal" class="modal fade">
                             <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-applicant-auth modal-body">
-                <div id="login-error-area" class="alert alert-error alert_small"></div>
-                <section class="auth">
-                    <div class="auth__wrapper">
-                        <div class="auth__title h3-like registr-title">Вход</div>
-                        <!--script src="/forms/js/third-party/jquery.form.min.js" type="text/javascript"></script>
+                                <div class="modal-content">
+                                    <div class="modal-applicant-auth modal-body">
+                                        <div id="login-error-area" class="alert alert-error alert_small"></div>
+                                        <section class="auth">
+                                            <div class="auth__wrapper">
+                                                <div class="auth__title h3-like registr-title">Р’С…РѕРґ</div>
+                                                <!--script src="/forms/js/third-party/jquery.form.min.js" type="text/javascript"></script>
                         <script src="/js/praca/auth-ajax-form.js" type="text/javascript"></script-->
-                        <form name="login-form" method="post" class="auth__form" id="login-form">
-                            <div>
-                                <dl>
-                                    <dt>E-mail <span class="red-star">*</span>  <span id="praca-login-help-email" class="help-icon" data-original-title="" title=""></span></dt>
-                                    <dd>
-                                        <input name="login-form[email]" type="text" maxlength="255" class="form-etc account-area auth__text-input">                                                                             </dd>
-                                        <dt>Пароль <span class="red-star">*</span>  <span id="praca-login-help-password" class="help-icon" data-original-title="" title=""></span></dt>
-                                        <dd>
-                                            <input name="login-form[password]" type="password" maxlength="16" class="form-etc xxx account-password auth__text-input">                                                                               </dd>
-                                            <dd id="web-forms__collection_dd_js-advanced-checkbox-58b687df2a428__item">
-                                                <label class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-check ui-state-checked ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span><div class="advanced-checkbox"><input name="login-form[remember]" type="checkbox" checked="checked" value="1" id="js-advanced-checkbox-58b687df2a428" class="ui-checkboxradio ui-helper-hidden-accessible"></div> запомнить меня <span id="praca-login-help-remember" class="help-icon" data-original-title="" title=""></span></label>                                                                                </dd>
-                                                <dd>
-                                                    <input name="login-form[referrer]" type="hidden" value="https://praca.by/">                                                                             </dd>
-                                                    <dd>
-                                                        <input type="submit" value="Войти" data-loading-text="Вход..." class="btn btn_green"><a class="forget-password" href="#" tabindex="-1">Забыли пароль?</a>                                                                             </dd>
-                                                    </dl>   </div>
+                                                <form name="login-form" method="post" class="auth__form" id="login-form">
+                                                    <div>
+                                                        <dl>
+                                                            <dt>E-mail <span class="red-star">*</span>  <span id="praca-login-help-email" class="help-icon" data-original-title="" title=""></span></dt>
+                                                            <dd>
+                                                                <input name="login-form[email]" type="text" maxlength="255" class="form-etc account-area auth__text-input"> </dd>
+                                                            <dt>РџР°СЂРѕР»СЊ <span class="red-star">*</span>  <span id="praca-login-help-password" class="help-icon" data-original-title="" title=""></span></dt>
+                                                            <dd>
+                                                                <input name="login-form[password]" type="password" maxlength="16" class="form-etc xxx account-password auth__text-input"> </dd>
+                                                            <dd id="web-forms__collection_dd_js-advanced-checkbox-58b687df2a428__item">
+                                                                <label class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-check ui-state-checked ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span><div class="advanced-checkbox"><input name="login-form[remember]" type="checkbox" checked="checked" value="1" id="js-advanced-checkbox-58b687df2a428" class="ui-checkboxradio ui-helper-hidden-accessible"></div> Р·Р°РїРѕРјРЅРёС‚СЊ РјРµРЅСЏ <span id="praca-login-help-remember" class="help-icon" data-original-title="" title=""></span></label> </dd>
+                                                            <dd>
+                                                                <input name="login-form[referrer]" type="hidden" value=""> </dd>
+                                                            <dd>
+                                                                <input type="submit" value="Р’РѕР№С‚Рё" data-loading-text="Р’С…РѕРґ..." class="btn btn_green"><a class="forget-password" href="#" tabindex="-1">Р—Р°Р±С‹Р»Рё РїР°СЂРѕР»СЊ?</a> </dd>
+                                                        </dl>
+                                                    </div>
                                                 </form>
                                                 <!--script type="text/javascript">web_forms__init_ajax_form('#login-form');</script>
                                                 <script>
@@ -304,491 +113,456 @@ color:blue;
                                                     Praca.Common.Interface.Popovers.setupPopover($('#praca-login-help-remember'), 'login_remember');
 
                                                     $('#login-form input[type="checkbox"]').checkboxradio();
-                                                </script-->                       <div class="social-binding social-binding_login">
-                                                <p class="social-binding__note social-binding__note_login">Вход через социальную сеть</p>
-                                                <ul class="social-binding__list clearfix">
-                                                    <li class="social-binding__item"><a class="social-icon social-icon_google-plus" href="https://praca.by/social-auth/Google/"><i class="mdi mdi-google-plus"></i></a></li>
-                                                    <li class="social-binding__item"><a class="social-icon social-icon_facebook" href="https://praca.by/social-auth/Facebook/"><i class="mdi mdi-facebook"></i></a></li>
-                                                    <li class="social-binding__item"><a class="social-icon social-icon_twitter" href="https://praca.by/social-auth/Twitter/"><i class="mdi mdi-twitter"></i></a></li>
-                                                    <li class="social-binding__item"><a class="social-icon social-icon_vk" href="https://praca.by/social-auth/Vkontakte/"><i class="mdi mdi-vk"></i></a></li>
-                                                    <li class="social-binding__item"><a class="social-icon social-icon_odnoklassniki" href="https://praca.by/social-auth/Odnoklassniki/"><i class="mdi mdi-odnoklassniki"></i></a></li>
-                                                </ul>
-                                            </div>                  </div>
+                                                </script-->
+                                                <div class="social-binding social-binding_login">
+                                                    <p class="social-binding__note social-binding__note_login">Р’С…РѕРґ С‡РµСЂРµР· СЃРѕС†РёР°Р»СЊРЅСѓСЋ СЃРµС‚СЊ</p>
+                                                    <ul class="social-binding__list clearfix">
+                                                        <li class="social-binding__item"><a class="social-icon social-icon_google-plus" href="https://praca.by/social-auth/Google/"><i class="mdi mdi-google-plus"></i></a></li>
+                                                        <li class="social-binding__item"><a class="social-icon social-icon_facebook" href="https://praca.by/social-auth/Facebook/"><i class="mdi mdi-facebook"></i></a></li>
+                                                        <li class="social-binding__item"><a class="social-icon social-icon_twitter" href="https://praca.by/social-auth/Twitter/"><i class="mdi mdi-twitter"></i></a></li>
+                                                        <li class="social-binding__item"><a class="social-icon social-icon_vk" href="https://praca.by/social-auth/Vkontakte/"><i class="mdi mdi-vk"></i></a></li>
+                                                        <li class="social-binding__item"><a class="social-icon social-icon_odnoklassniki" href="https://praca.by/social-auth/Odnoklassniki/"><i class="mdi mdi-odnoklassniki"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
 
                                             <div class="auth__wrapper js-dependent-auth js-default-auth">
                                                 <div class="reg-invite">
                                                     <div class="reg-invite__wrapper">
-                                                        <div class="h3-like registr-title">Соискателям</div>
+                                                        <div class="h3-like registr-title">РЎРѕРёСЃРєР°С‚РµР»СЏРј</div>
                                                         <p class="reg-invite__description">
-                                                            <noindex>Зарегистрировавшись, соискатели могут
-                                                                размещать резюме и откликаться на заинтересовавшие их вакансии.</noindex>
-                                                            </p>
-                                                            <a href="#" class="btn btn_green">Регистрация соискателя</a>
-                                                        </div>
-
-                                                        <div class="reg-invite__wrapper">
-                                                            <div class="h3-like registr-title">Работодателям</div>
-                                                            <p class="reg-invite__description">
-                                                                <noindex>Зарегистрировавшись, работодатели могут размещать свои&nbsp;вакансии.</noindex>
-                                                            </p>
-                                                            <a href="#" class="btn btn_orange">Регистрация работодателя</a>
-                                                        </div>
+                                                            <noindex>Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РІС€РёСЃСЊ, СЃРѕРёСЃРєР°С‚РµР»Рё РјРѕРіСѓС‚ СЂР°Р·РјРµС‰Р°С‚СЊ СЂРµР·СЋРјРµ Рё РѕС‚РєР»РёРєР°С‚СЊСЃСЏ РЅР° Р·Р°РёРЅС‚РµСЂРµСЃРѕРІР°РІС€РёРµ РёС… РІР°РєР°РЅСЃРёРё.</noindex>
+                                                        </p>
+                                                        <a href="#" class="btn btn_green">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕРёСЃРєР°С‚РµР»СЏ</a>
                                                     </div>
-                                                </div>
 
-
-                                                <div class="auth__wrapper js-dependent-auth js-applicant-auth no-padding-right" style="display: none;">
-                                                    <div class="reg-applicant__wrapper">
-                                                        <div class="fff h3-like registr-title">Регистрация соискателя</div>
-                                                        <div class="text-gray">
-                                                            <noindex>Еще нет аккаунта? Зарегистрируйтесь!</noindex>
-                                                        </div>
-                                                        <div class="info-registr-cont">
-                                                            <div class="info-registr">
-                                                                <i class="svg svg-publish"></i>
-                                                                <span class="text-gray">Создавайте резюме</span>
-                                                            </div>
-                                                            <div class="info-registr">
-                                                                <i class="svg svg-laptop"></i>
-                                                                <span class="text-gray">Откликайтесь на вакансии</span>
-                                                            </div>
-                                                            <div class="info-registr">
-                                                                <i class="svg svg-mail"></i>
-                                                                <span class="text-gray">Получайте предложения от работодателей</span>
-                                                            </div>
-                                                        </div>
-                                                        <a href="#" class="btn btn_green btn_mrg-vertical">
-                                                            Регистрация соискателя                            </a>
-
-                                                            <p class="text-gray">Ищете сотрудников?
-                                                                <a href="#">Регистрация работодателя</a>
-                                                            </p>
-                                                        </div>
+                                                    <div class="reg-invite__wrapper">
+                                                        <div class="h3-like registr-title">Р Р°Р±РѕС‚РѕРґР°С‚РµР»СЏРј</div>
+                                                        <p class="reg-invite__description">
+                                                            <noindex>Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РІС€РёСЃСЊ, СЂР°Р±РѕС‚РѕРґР°С‚РµР»Рё РјРѕРіСѓС‚ СЂР°Р·РјРµС‰Р°С‚СЊ СЃРІРѕРё&nbsp;РІР°РєР°РЅСЃРёРё.</noindex>
+                                                        </p>
+                                                        <a href="#" class="btn btn_orange">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЂР°Р±РѕС‚РѕРґР°С‚РµР»СЏ</a>
                                                     </div>
-                                                    <div class="auth__wrapper js-dependent-auth js-employer-auth no-padding-right" style="display: none;">
-                                                        <div class="reg-applicant__wrapper">
-                                                            <div class="asd h3-like registr-title">Регистрация работодателя</div>
-                                                            <div class="text-gray">
-                                                                <noindex>Еще нет аккаунта? Зарегистрируйтесь!</noindex>
-                                                            </div>
-                                                            <div class="info-registr-cont">
-                                                                <div class="info-registr">
-                                                                    <i class="svg svg-publish"></i>
-                                                                    <span class="text-gray">Размещайте вакансии</span>
-                                                                </div>
-                                                                <div class="info-registr">
-                                                                    <i class="svg svg-laptop"></i>
-                                                                    <span class="text-gray">Получайте отклики от соискателей</span>
-                                                                </div>
-                                                                <div class="info-registr">
-                                                                    <i class="svg svg-servises"></i>
-                                                                    <span class="text-gray">Воспользуйтесь дополнительными услугами портала</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#" class="btn btn_green btn_mrg-vertical">
-                                                                Регистрация работодателя                            </a>
-
-                                                                <p class="text-gray">Ищете работу?
-                                                                    <a href="#">Регистрация соискателя</a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                                <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">
-                                                <i class="mdi mdi-close"></i></button>
                                                 </div>
                                             </div>
+
+
+                                            <div class="auth__wrapper js-dependent-auth js-applicant-auth no-padding-right" style="display: none;">
+                                                <div class="reg-applicant__wrapper">
+                                                    <div class="fff h3-like registr-title">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕРёСЃРєР°С‚РµР»СЏ</div>
+                                                    <div class="text-gray">
+                                                        <noindex>Р•С‰Рµ РЅРµС‚ Р°РєРєР°СѓРЅС‚Р°? Р—Р°СЂРµРіРёСЃС‚СЂРёСЂСѓР№С‚РµСЃСЊ!</noindex>
+                                                    </div>
+                                                    <div class="info-registr-cont">
+                                                        <div class="info-registr">
+                                                            <i class="svg svg-publish"></i>
+                                                            <span class="text-gray">РЎРѕР·РґР°РІР°Р№С‚Рµ СЂРµР·СЋРјРµ</span>
+                                                        </div>
+                                                        <div class="info-registr">
+                                                            <i class="svg svg-laptop"></i>
+                                                            <span class="text-gray">РћС‚РєР»РёРєР°Р№С‚РµСЃСЊ РЅР° РІР°РєР°РЅСЃРёРё</span>
+                                                        </div>
+                                                        <div class="info-registr">
+                                                            <i class="svg svg-mail"></i>
+                                                            <span class="text-gray">РџРѕР»СѓС‡Р°Р№С‚Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ РѕС‚ СЂР°Р±РѕС‚РѕРґР°С‚РµР»РµР№</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn_green btn_mrg-vertical">
+                                                            Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕРёСЃРєР°С‚РµР»СЏ                            </a>
+
+                                                    <p class="text-gray">РС‰РµС‚Рµ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ?
+                                                        <a href="#">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЂР°Р±РѕС‚РѕРґР°С‚РµР»СЏ</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="auth__wrapper js-dependent-auth js-employer-auth no-padding-right" style="display: none;">
+                                                <div class="reg-applicant__wrapper">
+                                                    <div class="asd h3-like registr-title">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЂР°Р±РѕС‚РѕРґР°С‚РµР»СЏ</div>
+                                                    <div class="text-gray">
+                                                        <noindex>Р•С‰Рµ РЅРµС‚ Р°РєРєР°СѓРЅС‚Р°? Р—Р°СЂРµРіРёСЃС‚СЂРёСЂСѓР№С‚РµСЃСЊ!</noindex>
+                                                    </div>
+                                                    <div class="info-registr-cont">
+                                                        <div class="info-registr">
+                                                            <i class="svg svg-publish"></i>
+                                                            <span class="text-gray">Р Р°Р·РјРµС‰Р°Р№С‚Рµ РІР°РєР°РЅСЃРёРё</span>
+                                                        </div>
+                                                        <div class="info-registr">
+                                                            <i class="svg svg-laptop"></i>
+                                                            <span class="text-gray">РџРѕР»СѓС‡Р°Р№С‚Рµ РѕС‚РєР»РёРєРё РѕС‚ СЃРѕРёСЃРєР°С‚РµР»РµР№</span>
+                                                        </div>
+                                                        <div class="info-registr">
+                                                            <i class="svg svg-servises"></i>
+                                                            <span class="text-gray">Р’РѕСЃРїРѕР»СЊР·СѓР№С‚РµСЃСЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹РјРё СѓСЃР»СѓРіР°РјРё РїРѕСЂС‚Р°Р»Р°</span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn_green btn_mrg-vertical">
+                                                                Р РµРіРёСЃС‚СЂР°С†РёСЏ СЂР°Р±РѕС‚РѕРґР°С‚РµР»СЏ                            </a>
+
+                                                    <p class="text-gray">РС‰РµС‚Рµ СЂР°Р±РѕС‚Сѓ?
+                                                        <a href="#">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕРёСЃРєР°С‚РµР»СЏ</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true">
+                                                <i class="mdi mdi-close"></i></button>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                        
-                        
-                        
-                        <div id='' class="clearfix">
-                            <span style="float: right;">
+                    </div>
+
+
+
+                    <div id='' class="clearfix">
+                        <span style="float: right;">
                                 <i class='icon-dollar'></i>
-                                Выбор валюты
+                                Р’С‹Р±РѕСЂ РІР°Р»СЋС‚С‹
                                 <i class="icon-angle-down"></i>
                             </span>
+                    </div>
+                </div>
+                <div id="info" style="float: left;">
+                    <div id='weather' class="head-inner">
+
+                    </div>
+                    <div id='kurs' class="head-inner">
+                        <div id='kurs-money'>
+                        </div>
+                        <div id='kurs-fuel'>
                         </div>
                     </div>
-                    <div id="info" style="float: left;">
-    					<div id='weather' class="head-inner">
-    					
-    					</div>
-    					<div id='kurs' class="head-inner">
-    						<div id='kurs-money'>
-    						</div>
-    						<div id='kurs-fuel'>
-    						</div>
-    					</div>
-                    </div>
-				</div>
-			</div>
-			<div id="mainNav" >
-			
-				<div class="iner-wrap clearfix">
-					<ul class=menu>
-						<li style="background-color:#b30097;">	
-							<a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
-							</a>
-						</li>
-						<li>
-							<a href="#">Новости <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-							<ul class='submenu'>
-								<li>
-									<a href="#" style="width: 137.5px;">Актуальное</a>
-								</li>
-								<li>
-									<a href="#" style="width: 137.5px;">Происшествия</a>
-								</li>
-								<li>
-									<a href="#" style="width: 137.5px;">Это интересно</a>
-								</li>
-								<li>
-									<a href="#" style="width: 137.5px;">Шоубизнес</a>
-								</li>
-								<li>
-									<a href="#" style="width: 137.5px;">Авто News</a>
-								</li>
-								<li>
-									<a href="#" style="width: 137.5px;">IT-сфера</a>
-								</li>
-								<li>
-									<a href="#" style="width: 137.5px;">Все новости</a>
-								</li>
-							</ul>
-						</li>
-						<li>	
-							<a href="#">Форум</a>
-						</li>
-						<li>	
-							<a href="#">Стать партнером</a>
-						</li>
-						<li>	
-							<a href="#">Карты salam.by</a>
-						</li>
-						<li>	
-							<a href="#" class="visibl_li">Партнеры salam.by</a>
-						</li>
-						<li>	
-							<a href="#">Продукция</a>
-						</li>                      
-					</ul>
-					<ul class="menu_unvis">
-					    <li style="background-color:#b30097;">	
-							<a href="#" class="icon-home" style="    padding-left: 1px; padding-right: 1px;">
-							</a>
-						</li>
-						<li>
-						    <a href="#" class="icon-menu" style="padding-left:1px; padding-right:1px;"></a>
-						    <ul class="submenu_unvis">
+                </div>
+            </div>
+        </div>
+        <div id="mainNav">
 
-						        <li>
-									<a href="#">Новости</a>
-						        </li>
-                                <li>    
-                                    <a href="#">Форум</a>
-                                </li>
-                                <li>    
-                                    <a href="#">Стать партнером</a>
-                                </li>
-                                <li>    
-                                    <a href="#">Карты salam.by</a>
-                                </li>
-                                <li>    
-                                    <a href="#" class="visibl_li">Партнеры salam.by</a>
-                                </li>
-                                <li>    
-                                    <a href="#">Продукция</a>
-                                </li>                               
-								</ul> 
-						</li>
-                        <li class="logo-mobile-menu">
-                            <img src="img/logo-white.png">
-                        </li>
-					</ul>
-				</div>
-			</div>
-		</header>
+            <div class="iner-wrap clearfix">
+                <ul class=menu>
+                    <li style="background-color:#b30097;">
+                        <a href="#" class="icon-home" style="padding-left: 1px; padding-right: 1px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">РќРѕРІРѕСЃС‚Рё <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                        <ul class='submenu'>
+                            <li>
+                                <a href="#" style="width: 137.5px;">РђРєС‚СѓР°Р»СЊРЅРѕРµ</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width: 137.5px;">РџСЂРѕРёСЃС€РµСЃС‚РІРёСЏ</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width: 137.5px;">Р­С‚Рѕ РёРЅС‚РµСЂРµСЃРЅРѕ</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width: 137.5px;">РЁРѕСѓР±РёР·РЅРµСЃ</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width: 137.5px;">РђРІС‚Рѕ News</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width: 137.5px;">IT-СЃС„РµСЂР°</a>
+                            </li>
+                            <li>
+                                <a href="#" style="width: 137.5px;">Р’СЃРµ РЅРѕРІРѕСЃС‚Рё</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Р¤РѕСЂСѓРј</a>
+                    </li>
+                    <li>
+                        <a href="#">РЎС‚Р°С‚СЊ РїР°СЂС‚РЅРµСЂРѕРј</a>
+                    </li>
+                    <li>
+                        <a href="#">РљР°СЂС‚С‹ salam.by</a>
+                    </li>
+                    <li>
+                        <a href="#" class="visibl_li">РџР°СЂС‚РЅРµСЂС‹ salam.by</a>
+                    </li>
+                    <li>
+                        <a href="#">РџСЂРѕРґСѓРєС†РёСЏ</a>
+                    </li>
+                </ul>
+                <ul class="menu_unvis">
+                    <li style="background-color:#b30097;">
+                        <a href="#" class="icon-home" style="padding-left: 1px; padding-right: 1px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-menu" style="padding-left:1px; padding-right:1px;"></a>
+                        <ul class="submenu_unvis">
 
+                            <li>
+                                <a href="#">РќРѕРІРѕСЃС‚Рё</a>
+                            </li>
+                            <li>
+                                <a href="#">Р¤РѕСЂСѓРј</a>
+                            </li>
+                            <li>
+                                <a href="#">РЎС‚Р°С‚СЊ РїР°СЂС‚РЅРµСЂРѕРј</a>
+                            </li>
+                            <li>
+                                <a href="#">РљР°СЂС‚С‹ salam.by</a>
+                            </li>
+                            <li>
+                                <a href="#" class="visibl_li">РџР°СЂС‚РЅРµСЂС‹ salam.by</a>
+                            </li>
+                            <li>
+                                <a href="#">РџСЂРѕРґСѓРєС†РёСЏ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="logo-mobile-menu">
+                        <img src="img/logo-white.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="firw">
+        <h1 id="mw">Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕРёСЃРєР°С‚РµР»СЏ</h1>
+        <p>Р’С‹ РјРѕР¶РµС‚Рµ РїСЂРёРІСЏР·Р°С‚СЊ РѕРґРёРЅ РёР»Рё РЅРµСЃРєРѕР»СЊРєРѕ Р°РєРєР°СѓРЅС‚РѕРІ РІ СЃРѕС†РёР°Р»СЊРЅС‹С… СЃРµС‚СЏС… Рє РІР°С€РµР№ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё, РєРѕС‚РѕСЂР°СЏ Р±СѓРґРµС‚ СЃРѕР·РґР°РЅР° РїРѕСЃР»Рµ СЂРµРіРёСЃС‚СЂР°С†РёРё. Р”Р»СЏ СЌС‚РѕРіРѕ РєР»РёРєРЅРёС‚Рµ РїРѕ РёРєРѕРЅРєР°Рј СЃРѕС†РёР°Р»СЊРЅС‹С… СЃРµС‚РµР№, РєРѕС‚РѕСЂС‹Рµ С…РѕС‚РёС‚Рµ РїСЂРёРІСЏР·Р°С‚СЊ
+            <p>
+    </div>
+
+    <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
+        <p id="tlt">РџРµСЂСЃРѕРЅР°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</p>
 
 
+        <div class="mname">
 
 
+            <div class="onei">
+                <label class='lable-form'>E-mail<span class="red-star" id='valid'> *</span></label>
+                <input id="emailval" type="email" name="email" required>
+            </div>
 
-<div class="firw">
-<h1 id="mw">Регистрация соискателя</h1>
-<p>Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи, которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать<p>
-</div>
+            <div class="pas">
+                <div class="onei" id="secr">
+                    <label class='lable-form'>РџР°СЂРѕР»СЊ<span class="red-star"> *</span></label>
+                    <input type="password" name="password" id='pas1' required>
+                </div>
 
-<form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
-<p id="tlt">Персональная информация</p>
+                <div class="onei" id="secr">
+                    <label class='lable-form'>РџРѕРІС‚РѕСЂРёС‚СЊ РїР°СЂРѕР»СЊ<span class="red-star"> *</span></label>
+                    <input type="password" name="password" id='pas2' required>
+                </div>
+            </div>
 
+            <div class="sssss">
+                <div class="onei" id="name">
+                    <label class='lable-form'>Р¤Р°РјРёР»РёСЏ<span class="red-star"> *</span></label>
 
-<div class="mname">
+                    <input type="text" name="name" required>
+                </div>
+                <div class="onei" id="name">
+                    <label class='lable-form'>РРјСЏ<span class="red-star"> *</span></label>
+                    <input type="text" name="last_name" required>
+                </div>
+                <div class="onei" id="name">
+                    <label class='lable-form'>РћС‚С‡РµСЃС‚РІРѕ</label>
+                    <input type="text" name="second_name" required="off">
+                </div>
+            </div>
 
-
-<div class="onei">
-<label>E-mail</label>
-<input id="emailval" type="email"  name="email" required>
-<label class="hiddencheck" id="emailz">Введен некорректный e-mail адрес</label>
-</div>
-
-<div class="pas">
-<div class="onei" id="secr">
-<label>Пароль</label>
-<input type="password"  name="password"  required>
-</div>
-
-<div class="onei" id="secr">
-<label>Повторить пароль</label>
-<input type="password"  name="password"  required>
-</div>
-</div>
-
-<div class="sssss">
-<div class="onei" id="name">
-<label>Фамилия</label>
-
-<input type="text"  name="name" required>
-</div>
-<div class="onei" id="name">
-<label>Имя</label>
-<input type="text"  name="last_name" required>
-</div>
-<div class="onei" id="name">
-<label>Отчество</label>
-<input type="text"  name="second_name" required="off">
-</div>
-</div>
-
-</div>
+        </div>
 
 
-<div class="telly">
-<p id="tlt">Контакты</p>
-<p>Укажите все контакты, по которым работодатели смогут связаться с вами. Контакты, не отмеченные галочкой «Показывать в резюме», станут доступны работодателю только после принятия отклика или предложения работы на портале.</p>
-<p id="secondary">Основной номер телефона</p>
-<div class="onei" >
-<label>Телефон</label>
-<input type="tel" id="telv" name="telephone"  required>
-    <input id="it" type="checkbox" name="viewtel"><p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
-<label class="hiddencheck" id="telz">Введен некорректный номер</label>
+        <div class="telly">
+            <p id="tlt">РљРѕРЅС‚Р°РєС‚С‹</p>
+            <p>РЈРєР°Р¶РёС‚Рµ РІСЃРµ РєРѕРЅС‚Р°РєС‚С‹, РїРѕ РєРѕС‚РѕСЂС‹Рј СЂР°Р±РѕС‚РѕРґР°С‚РµР»Рё СЃРјРѕРіСѓС‚ СЃРІСЏР·Р°С‚СЊСЃСЏ СЃ РІР°РјРё. РљРѕРЅС‚Р°РєС‚С‹, РЅРµ РѕС‚РјРµС‡РµРЅРЅС‹Рµ РіР°Р»РѕС‡РєРѕР№ В«РџРѕРєР°Р·С‹РІР°С‚СЊ РІ СЂРµР·СЋРјРµВ», СЃС‚Р°РЅСѓС‚ РґРѕСЃС‚СѓРїРЅС‹ СЂР°Р±РѕС‚РѕРґР°С‚РµР»СЋ С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ РїСЂРёРЅСЏС‚РёСЏ РѕС‚РєР»РёРєР° РёР»Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ СЂР°Р±РѕС‚С‹ РЅР° РїРѕСЂС‚Р°Р»Рµ.</p>
+            <p id="secondary">РћСЃРЅРѕРІРЅРѕР№ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°<span id="applicant-register-primary-contact" class="help-icon" data-original-title="" title=""></span></p>
+            <div class="onei">
+                <label class='lable-form'>РўРµР»РµС„РѕРЅ<span class="red-star"> *</span></label>
+                <input type="tel" id="telv" name="telephone" pattern="^\d{4}-\d{3}-\d{4}$" required>
+                <input id="it" type="checkbox" name="viewtel" type>
+                <p id="imp" style="display:inline-block;margin:0;">РџРѕРєР°Р·С‹РІР°С‚СЊ РІ СЂРµР·СЋРјРµ</p>
+                <label class="hiddencheck" id="telz">Р’РІРµРґРµРЅ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РЅРѕРјРµСЂ</label>
 
-<div style="margin-top:15px;">
- <input id="it" type="checkbox" style="margin:0;" name="ifsend"><p id="imp" style="display:inline-block;margin:0;margin-left:5px;">Отправлять SMS-уведомления об откликах</p>
-<p id="msgbl">На вышеуказанный номер будет выслано SMS с кодом подтверждения, который нужно ввести на странице вашего профиля</p>
-</div>
-</div>
-</div>
+                <div style="margin-top:15px;">
+                    <input id="it" type="checkbox" style="margin:0;" name="ifsend">
+                    <p id="imp" style="display:inline-block;margin:0;margin-left:5px;">РћС‚РїСЂР°РІР»СЏС‚СЊ SMS-СѓРІРµРґРѕРјР»РµРЅРёСЏ РѕР± РѕС‚РєР»РёРєР°С…</p>
+                    <p id="msgbl">РќР° РІС‹С€РµСѓРєР°Р·Р°РЅРЅС‹Р№ РЅРѕРјРµСЂ Р±СѓРґРµС‚ РІС‹СЃР»Р°РЅРѕ SMS СЃ РєРѕРґРѕРј РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ, РєРѕС‚РѕСЂС‹Р№ РЅСѓР¶РЅРѕ РІРІРµСЃС‚Рё РЅР° СЃС‚СЂР°РЅРёС†Рµ РІР°С€РµРіРѕ РїСЂРѕС„РёР»СЏ</p>
+                </div>
+            </div>
+        </div>
 
-<p id="secondary" class="now" style="margin-top:5%;">Другие способы связи</p>
-<div class="aaa">
-<div class="ochoices">
-<div class="choices">
-<div class="item" style="width:10px;">
-<p id="secondary" style="margin-left:20px;" >Тип</p>
-<select id="choose">
+        <p id="secondary" class="now" style="margin-top: 12px;">Р”СЂСѓРіРёРµ СЃРїРѕСЃРѕР±С‹ СЃРІСЏР·Рё</p>
+        <div class="aaa">
+            <div class="ochoices">
+                <div class="choices">
+                    <div class="item" style="width:10px;">
+                        <p id="secondary" style="margin-left:20px;">РўРёРї</p>
+                        <select id="choose">
 <option>Telephone</option>
 <option>E-mail</option>
 <option>Skype</option>
 <option>ICQ</option>
 <option>Jabber/GTalk</option>
-<option>Mail.ru Агент</option>
+<option>Mail.ru РђРіРµРЅС‚</option>
 </select>
-</div>
+                    </div>
 
-<div class="item">
-<p id="secondary">Значение</p>
-<input class="chin" type="text">
+                    <div class="item">
+                        <p id="secondary">Р—РЅР°С‡РµРЅРёРµ</p>
+                        <input class="chin" type="text">
+                        <input id="it" type="checkbox" name="viewtel">
+                        <p id="imp" style="display:inline-block;margin:0;">РџРѕРєР°Р·С‹РІР°С‚СЊ РІ СЂРµР·СЋРјРµ</p>
 
-<input id="it" type="checkbox" name="viewtel"><p id="imp" style="display:inline-block;margin:0;">Показывать в резюме</p>
-
-</div>
-
-
-</div>
-
-</div>
-<div id="mixr" style="display:inline-block;" >
-<i style="display:inline-block;" class="fa fa-trash"></i><p onclick="dele()"  style="display:inline-block;" id="del">Удалить</p>
-</div>
-</div>
-<div class="joinadd" id="mixr">
-<i class="fa fa-plus" aria-hidden="true"></i><p onclick="clickadd()" style="display:inline-block;" id="create" id="del">Добавить</p>
-</div>
-
-<input type="submit" style="margin-top"50px;" class="btn-style" value="Зарегистрироваться"/>
-</form>
+                    </div>
 
 
-<footer class='text-foot'>
-		<div class=" footer-top">
+                </div>
+
+            </div>
+            <div id="mixr" style="display:inline-block;">
+                <i style="display:inline-block;" class="fa fa-trash"></i>
+                <p onclick="dele()" style="display:inline-block;" id="del">РЈРґР°Р»РёС‚СЊ</p>
+            </div>
+        </div>
+        <div class="joinadd" id="mixr">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <p onclick="clickadd()" style="display:inline-block;" id="create" id="del">Р”РѕР±Р°РІРёС‚СЊ</p>
+        </div>
+
+        <input type="submit" style="margin-top" 50px; class="btn-style " value="Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ " />
+    </form>
+
+
+    <footer class='text-foot'>
+        <div class=" footer-top">
             <div class="inner-wrap-foot">
                 <div id="footer-fix" class="clearfix">
-    			<div class='foot-menu'>
-    				<h3 class='foot-menu-top'>Правила пользования</h3>
-    				<ul class=''>
-    					<li>
-    						<a href="#">Пользовательское соглашение</a>
-    					</li>
-    					<li>	
-    						<a href="#">Политика конфеденциальности</a>
-    					</li>
-    					<li>	
-    						<a href="#">Правила размещения</a>
-    					</li>
-    					<li>	
-    						<a href="#">Публичный договор</a>
-    					</li>
-    				</ul>
-    			</div>
-    			<div class='foot-menu'>
-    				<h3 class='foot-menu-top'>Обратная связь</h3>
-    				<ul class=''>
-    					<li>
-    						<a href="#">Тарифы и услуги</a>
-    					</li>
-    					<li>	
-    						<a href="#">Соглашение на размещение</a>
-    					</li>
-    					<li>	
-    						<a href="#">Реклама на сайте</a>
-    					</li>
-    				</ul>
-    			</div>
-    			<div class='foot-menu'>
-    				<h3 class='foot-menu-top'>Работодателям</h3>
-    				<ul class=''>
-    					<li>
-    						<a href="#">Часто задаваемые вопросы</a>
-    					</li>
-    					<li>	
-    						<a href="#">Размещение резюме</a>
-    					</li>
-    					<li>	
-    						<a href="#">Контанткы</a>
-    					</li>
-    				</ul>
-    			</div>
-    			<div class='foot-menu foot-menu-right'>
-    				<ul id='contacts'>
-    					<li>
-    						<a href="#"><i class='icon-vkontakte-rect' style="font-size: 18px"></i></a>
-    						<a href="#"><i class='icon-facebook-squared'></i></a>
-    						<a href="#"><i class='icon-twitter-squared'></i></a>
-    						<a href="#"><i class='icon-odnoklassniki-square'></i></a>
-    					</li>
-    					<li>	
-    						Работа salam.by
-    					</li>
-    					<li>	
-    						<span>+375(29) 668 21 15</span>
-    					</li>
-    				</ul>
+                    <div class='foot-menu'>
+                        <h3 class='foot-menu-top'>РџСЂР°РІРёР»Р° РїРѕР»СЊР·РѕРІР°РЅРёСЏ</h3>
+                        <ul class=''>
+                            <li>
+                                <a href="#">РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРµ СЃРѕРіР»Р°С€РµРЅРёРµ</a>
+                            </li>
+                            <li>
+                                <a href="#">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РµРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a>
+                            </li>
+                            <li>
+                                <a href="#">РџСЂР°РІРёР»Р° СЂР°Р·РјРµС‰РµРЅРёСЏ</a>
+                            </li>
+                            <li>
+                                <a href="#">РџСѓР±Р»РёС‡РЅС‹Р№ РґРѕРіРѕРІРѕСЂ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='foot-menu'>
+                        <h3 class='foot-menu-top'>РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ</h3>
+                        <ul class=''>
+                            <li>
+                                <a href="#">РўР°СЂРёС„С‹ Рё СѓСЃР»СѓРіРё</a>
+                            </li>
+                            <li>
+                                <a href="#">РЎРѕРіР»Р°С€РµРЅРёРµ РЅР° СЂР°Р·РјРµС‰РµРЅРёРµ</a>
+                            </li>
+                            <li>
+                                <a href="#">Р РµРєР»Р°РјР° РЅР° СЃР°Р№С‚Рµ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='foot-menu'>
+                        <h3 class='foot-menu-top'>Р Р°Р±РѕС‚РѕРґР°С‚РµР»СЏРј</h3>
+                        <ul class=''>
+                            <li>
+                                <a href="#">Р§Р°СЃС‚Рѕ Р·Р°РґР°РІР°РµРјС‹Рµ РІРѕРїСЂРѕСЃС‹</a>
+                            </li>
+                            <li>
+                                <a href="#">Р Р°Р·РјРµС‰РµРЅРёРµ СЂРµР·СЋРјРµ</a>
+                            </li>
+                            <li>
+                                <a href="#">РљРѕРЅС‚Р°РЅС‚РєС‹</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='foot-menu foot-menu-right'>
+                        <ul id='contacts'>
+                            <li>
+                                <a href="#"><i class='icon-vkontakte-rect' style="font-size: 18px"></i></a>
+                                <a href="#"><i class='icon-facebook-squared'></i></a>
+                                <a href="#"><i class='icon-twitter-squared'></i></a>
+                                <a href="#"><i class='icon-odnoklassniki-square'></i></a>
+                            </li>
+                            <li>
+                                Р Р°Р±РѕС‚Р° salam.by
+                            </li>
+                            <li>
+                                <span>+375(29) 668 21 15</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-    			</div>
             </div>
-		</div>
-		<div class="footer-bottom">
-			<div class="inner-wrap-foot">
-				<div style="padding-top:10px;">Rabota.salam.by 2017, ООО  &laquoАпроАвтоТех&raquo</div>
-				<div style="padding-bottom:10px;">УНП 77788999 Свидетельство о государственной регистрации выдано Мингорисполкомом решением от 11.08.2003 № 856</div>
-			</div>
-		</div>
-	</footer>
+        </div>
+        <div class="footer-bottom">
+            <div class="inner-wrap-foot">
+                <div style="padding-top:10px;">Rabota.salam.by 2017, РћРћРћ &laquoРђРїСЂРѕРђРІС‚РѕРўРµС…&raquo</div>
+                <div style="padding-bottom:10px;">РЈРќРџ 77788999 РЎРІРёРґРµС‚РµР»СЊСЃС‚РІРѕ Рѕ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅРѕР№ СЂРµРіРёСЃС‚СЂР°С†РёРё РІС‹РґР°РЅРѕ РњРёРЅРіРѕСЂРёСЃРїРѕР»РєРѕРјРѕРј СЂРµС€РµРЅРёРµРј РѕС‚ 11.08.2003 в„– 856</div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        #mainNav {
+            width: 100%;
+            /*border-top:solid 5px rgb(40,157,204);*/
+            /*background-color: rgb(35,35,35);*/
+            display: block;
+            height: 50px;
+        }
+        
+        .mainNavfixed {
+            position: fixed;
+            top: 0;
+            z-index: 101;
+        }
 
+    </style>
+    <script>
+           (function() { // Р°РЅРѕРЅРёРјРЅР°СЏ С„СѓРЅРєС†РёСЏ (function(){ })(), С‡С‚РѕР±С‹ РїРµСЂРµРјРµРЅРЅС‹Рµ "a" Рё "b" РЅРµ СЃС‚Р°Р»Рё РіР»РѕР±Р°Р»СЊРЅС‹РјРё
+            var a = document.querySelector('#mainNav'),
+                b = null; // СЃРµР»РµРєС‚РѕСЂ Р±Р»РѕРєР°, РєРѕС‚РѕСЂС‹Р№ РЅСѓР¶РЅРѕ Р·Р°РєСЂРµРїРёС‚СЊ
+            window.addEventListener('scroll', Ascroll, false);
+            document.body.addEventListener('scroll', Ascroll, false); // РµСЃР»Рё Сѓ html Рё body РІС‹СЃРѕС‚Р° СЂР°РІРЅР° 100%
+            function Ascroll() {
+                if (b == null) { // РґРѕР±Р°РІРёС‚СЊ РїРѕС‚РѕРјРєР°-РѕР±С‘СЂС‚РєСѓ, С‡С‚РѕР±С‹ СѓР±СЂР°С‚СЊ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ СЃ СЃРѕСЃРµРґСЏРјРё
+                    var Sa = getComputedStyle(a, ''),
+                        s = '';
+                    for (var i = 0; i < Sa.length; i++) { // РїРµСЂРµС‡РёСЃР»РёС‚СЊ СЃС‚РёР»Рё CSS, РєРѕС‚РѕСЂС‹Рµ РЅСѓР¶РЅРѕ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ СЃ СЂРѕРґРёС‚РµР»СЏ
+                        if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+                            s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
+                        }
+                    }
+                    b = document.createElement('div'); // СЃРѕР·РґР°С‚СЊ РїРѕС‚РѕРјРєР°
+                    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+                    a.insertBefore(b, a.firstChild); // РїРѕРјРµСЃС‚РёС‚СЊ РїРѕС‚РѕРјРєР° РІ С†РµРїР»СЏСЋС‰РёР№СЃСЏ Р±Р»РѕРє РїРµСЂРІС‹Рј
+                    var l = a.childNodes.length;
+                    for (var i = 1; i < l; i++) { // РїРµСЂРµРјРµСЃС‚РёС‚СЊ РІРѕ РІРЅРѕРІСЊ СЃРѕР·РґР°РЅРЅРѕРіРѕ РїРѕС‚РѕРјРєР° РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С… РїРѕС‚РѕРјРєРѕРІ (РёС‚РѕРіРѕ: СЃРѕР·РґР°РЅ РїРѕС‚РѕРјРѕРє-РѕР±С‘СЂС‚РєР°, РІРЅСѓС‚СЂРё РєРѕС‚РѕСЂРѕРіРѕ РїРѕ РїСЂРµР¶РЅРµРјСѓ СЂР°Р±РѕС‚Р°СЋС‚ СЃРєСЂРёРїС‚С‹)
+                        b.appendChild(a.childNodes[1]);
+                    }
+                    //a.style.height = b.getBoundingClientRect().height + 'px';  // РµСЃР»Рё РїРѕРґ СЃРєРѕР»СЊР·СЏС‰РёРј СЌР»РµРјРµРЅС‚РѕРј РµСЃС‚СЊ РґСЂСѓРіРёРµ Р±Р»РѕРєРё, РјРѕР¶РЅРѕ СЃРІРѕС‘ Р·РЅР°С‡РµРЅРёРµ
+                    a.style.padding = '0';
+                    a.style.border = '0'; // РµСЃР»Рё СЌР»РµРјРµРЅС‚Сѓ РїСЂРёСЃРІРѕРµРЅ padding РёР»Рё border
+                }
+                if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() РІРѕР·РІСЂР°С‰Р°РµС‚ РІ px РєРѕРѕСЂРґРёРЅР°С‚С‹ СЌР»РµРјРµРЅС‚Р° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РІРµСЂС…РЅРµРіРѕ Р»РµРІРѕРіРѕ СѓРіР»Р° РѕР±Р»Р°СЃС‚Рё РїСЂРѕСЃРјРѕС‚СЂР° РѕРєРЅР° Р±СЂР°СѓР·РµСЂР°
+                    b.className = 'mainNavfixed';
+                } else {
+                    b.className = '';
+                }
+                window.addEventListener('resize', function() {
+                    a.children[0].style.width = getComputedStyle(a, '').width
+                }, false); // РµСЃР»Рё РёР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ РѕРєРЅР° Р±СЂР°СѓР·РµСЂР°, РёР·РјРµРЅРёС‚СЊСЃСЏ С€РёСЂРёРЅР° СЌР»РµРјРµРЅС‚Р°
+            }
+        })()
 
+    </script>
 
-<script>
-
-function tely(tel){
-var tell = tel.value;
-
-phone = tell.replace(/[^0-9]/g, '');
-if(phone.length == 12 || phone == "") { 
-   document.getElementById("telz").style.display = "none";
-} else {
-  document.getElementById("telz").style.display = "block";
-} 
-
-}
-
-function validateForm(email) {
-    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    var emaill = email.value;
-    if(re.test(emaill) || emaill == ""){
-
- document.getElementById("emailz").style.display = "none";
-  return true;
- }else{
- document.getElementById("emailz").style.display = "block";
-return false;
- }
-}
-
-
-var node = document.getElementById("emailval");
-node.addEventListener("blur", function () { validateForm(node)} , false);
-
-var jode = document.getElementById("telv");
-jode.addEventListener("blur", function () { tely(jode)} , false);
-
-
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script>
-     function dele(){
-     $(".aaa").fadeOut(1000);
-     }
-</script>
-<script>
-  function clickadd(){
-       $(".now").append("<div>
-<div style='margin-left:10px;background:#fff;display:inline-block;width:720px;'>
-<div class='choices'>
-<div style='flex-grow:1;width:40%;height:100%;width:10px;'>
-<p style='color:#212121;font-size:14px;font-weight:900;margin-bottom:13px;margin-left:20px;' >Тип</p>
-<select style='width:150px;font-size:18px;outline:none;border-radius:4px;border:1px solid #d7d7d7;padding:1%;margin-right:0;height:33px;margin-left:20px;'>
-<option>Telephone</option>
-<option>E-mail</option>
-<option>Skype</option>
-<option>ICQ</option>
-<option>Jabber/GTalk</option>
-<option>Mail.ru Агент</option>
-</select>
-</div>
-
-<div style='flex-grow:1;width:40%;height:100%;'>
-<p style='color:#212121;font-size:14px;font-weight:900;margin-bottom:13px;'>Значение</p>
-<input style='display:inline-block;width:150px;height:30px;border:1px solid #d7d7d7;outline:none;padding-left:2%;font-size:18px;-webkit-transition:all 0.5s;-webkit-transition: all 0.5s;font-width:100;border-radius:4px;' type='text'>
-
-<input style='vertical-align:middle;
--ms-transform: scale(1.3); 
-  -moz-transform: scale(1.3); 
-  -webkit-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  padding: 5px;
-margin-left:15px;' type='checkbox' name='viewtel'><p  style='display:inline-block;margin:0;font-weight:400;'>Показывать в резюме</p>
-
-</div>
-
-
-</div>
-
-</div>
-<div style='color:blue;display:inline-block;' >
-<i style='display:inline-block;' class='fa fa-trash'></i><p onclick='dele()' onhover='text-decoration:underline;cursor:pointer;'  style='margin-left:5px;display:inline-block;' id='del'>Удалить</p>
-</div>
-</div>
-<div style='margin-left:10px;color:blue;'>
-<i class='fa fa-plus' aria-hidden='true'></i><p onhover='text-decoration:underline;cursor:pointer;' onclick='clickadd()' style='display:inline-block;' id='create' id='del'>Добавить</p>
-</div>");
-
-
-}
-
-</script>
 </body>
+<!--position: relative; float: left;-->
+
 </html>
