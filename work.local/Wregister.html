@@ -324,26 +324,24 @@
             <p>Вы можете привязать один или несколько аккаунтов в социальных сетях к вашей учетной записи, которая будет создана после регистрации. Для этого кликните по иконкам социальных сетей, которые хотите привязать.
                 <p>
         </div>
+        <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
         <div>
             <p id="tlt">Тип организации<span class="red-star" id='valid'> *</span></p>
 
-            <input name="radio1" type="radio" checked="checked" value="organization" id="radio1" class="ui-checkboxradio ui-helper-hidden-accessible">
+            <input name="radio" type="radio" checked="checked" value="yes" id="radio1" class="ui-checkboxradio ui-helper-hidden-accessible" onclick="functionShow()">
 
             <label for="radio1">
 					<span class="text">Юридическое лицо</span>
 				</label>
 
-            <input name="radio1" type="radio" value="organization" id="radio2" class="ui-checkboxradio ui-helper-hidden-accessible">
+            <input name="radio" type="radio" value="no" id="radio2" class="ui-checkboxradio ui-helper-hidden-accessible" onclick="functionHide()">
 
-            <label for="radio2" class="">
+            <label for="radio2" class="" >
 					<span class="text">Индивидуальный предприниматель</span>
 				</label>
 
         </div>
-
-
-
-        <form name="formm" onsubmit="return validation()" class="inputs" method="post" action="php.php">
+        
             <p id="tlt">Персональная информация</p>
 
 
@@ -383,9 +381,9 @@
                     </div>
 
                 </div>
-                <div class="onei">
-                    <label class='lable-form'>Должность<span class="red-star"> *</span></label>
-                    <input type="text" name="post" required>
+                <div class="onei" id='hiddenInput'>
+                    <label class='lable-form' class='posts' type='text'>Должность<span class="red-star"> *</span></label>
+                    <input type="text" class='posts' name="posts" required>
                 </div>
                 <div>
                     <p id="tlt" style='padding-top: 20px;'>Информация об организации</p>
@@ -431,7 +429,7 @@
             </div>
             <p>При необходимости этот номер может быть использован менеджерами портала @БЛАБЛА@ для связи с вашей организацией</p>
             <p id="secondary" class="now" style="margin-top: 12px;">Другие способы связи</p>
-            <div class="aaa">
+            <div class="aaa" id='test'>
                 <div class="ochoices">
                     <div class="choices">
                         <div class="item" style="width:10px;">
